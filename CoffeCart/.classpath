@@ -28,7 +28,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
-			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -108,44 +107,6 @@
 	<classpathentry kind="lib" path="/Users/rajabhamra/Downloads/selenium-java-4.33.0/selenium-safari-driver-4.33.0.jar"/>
 	<classpathentry kind="lib" path="/Users/rajabhamra/Downloads/selenium-java-4.33.0/selenium-support-4.33.0-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/rajabhamra/Downloads/selenium-java-4.33.0/selenium-support-4.33.0.jar"/>
-	<classpathentry kind="lib" path="/Users/rajabhamra/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.33.0/selenium-chrome-driver-4.33.0.jar" sourcepath="/Users/rajabhamra/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.33.0/selenium-chrome-driver-4.33.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-chrome-driver"/>
-			<attribute name="maven.version" value="4.33.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/rajabhamra/.m2/repository/org/seleniumhq/selenium/selenium-api/4.33.0/selenium-api-4.33.0.jar" sourcepath="/Users/rajabhamra/.m2/repository/org/seleniumhq/selenium/selenium-api/4.33.0/selenium-api-4.33.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-api"/>
-			<attribute name="maven.version" value="4.33.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/rajabhamra/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar" sourcepath="/Users/rajabhamra/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
-			<attribute name="maven.groupId" value="org.testng"/>
-			<attribute name="maven.artifactId" value="testng"/>
-			<attribute name="maven.version" value="7.11.0"/>
-			<attribute name="maven.scope" value="test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/rajabhamra/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar" sourcepath="/Users/rajabhamra/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
-			<attribute name="maven.groupId" value="org.testng"/>
-			<attribute name="maven.artifactId" value="testng"/>
-			<attribute name="maven.version" value="7.10.2"/>
-			<attribute name="maven.scope" value="test"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
