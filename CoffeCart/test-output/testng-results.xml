@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-09T17:05:54 BST" name="Default suite" finished-at="2025-06-09T17:06:00 BST" duration-ms="5628">
+  <suite started-at="2025-06-09T18:55:42 BST" name="Default suite" finished-at="2025-06-09T18:55:53 BST" duration-ms="11132">
     <groups>
     </groups>
-    <test started-at="2025-06-09T17:05:54 BST" name="Default test" finished-at="2025-06-09T17:06:00 BST" duration-ms="5628">
-      <class name="testCases.MenuItemsTest">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.MenuItemsTest@3bf7ca37]" started-at="2025-06-09T17:05:54 BST" name="launch" finished-at="2025-06-09T17:05:57 BST" duration-ms="2453" status="PASS">
+    <test started-at="2025-06-09T18:55:42 BST" name="Default test" finished-at="2025-06-09T18:55:53 BST" duration-ms="11132">
+      <class name="testCases.AddItemsToCartTest">
+        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.AddItemsToCartTest@4116aac9]" started-at="2025-06-09T18:55:42 BST" name="launch" finished-at="2025-06-09T18:55:44 BST" duration-ms="1877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.MenuItemsTest@3bf7ca37]" started-at="2025-06-09T17:05:57 BST" name="pageSetup" finished-at="2025-06-09T17:05:57 BST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.AddItemsToCartTest@4116aac9]" started-at="2025-06-09T18:55:44 BST" name="pageSetup" finished-at="2025-06-09T18:55:44 BST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="items()[pri:0, instance:testCases.MenuItemsTest@3bf7ca37]" started-at="2025-06-09T17:05:57 BST" name="items" finished-at="2025-06-09T17:05:57 BST" duration-ms="41" status="PASS">
+        <test-method signature="addingItems()[pri:0, instance:testCases.AddItemsToCartTest@4116aac9]" started-at="2025-06-09T18:55:44 BST" name="addingItems" finished-at="2025-06-09T18:55:50 BST" duration-ms="6119" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- items -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testCases.MenuItemsTest@3bf7ca37]" started-at="2025-06-09T17:05:57 BST" name="close" finished-at="2025-06-09T17:06:00 BST" duration-ms="3117" status="PASS">
+        </test-method> <!-- addingItems -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testCases.AddItemsToCartTest@4116aac9]" started-at="2025-06-09T18:55:50 BST" name="close" finished-at="2025-06-09T18:55:53 BST" duration-ms="3118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- testCases.MenuItemsTest -->
+      </class> <!-- testCases.AddItemsToCartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
