@@ -9,14 +9,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.BaseTest;
 
-public class MenuItems extends BaseTest {
+public class MenuItems {
 
-	public MenuItems(WebDriver driver) {
+	private WebDriverWait wait;
+
+	public MenuItems(WebDriver driver, WebDriverWait wait) {
 
 		PageFactory.initElements(driver, this);
+		this.wait = wait;
+
 	}
 
 	@FindBy(tagName = "h4")
