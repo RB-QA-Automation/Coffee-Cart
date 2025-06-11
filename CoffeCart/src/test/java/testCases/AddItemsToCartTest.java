@@ -1,5 +1,7 @@
 package testCases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -17,8 +19,8 @@ public class AddItemsToCartTest extends BaseTest {
 		beverages = new AddItemsToCart(driver, wait);
 	}
 
-	@Test
-	public void addingItems() throws InterruptedException {
+	@Test(dependsOnMethods = "testCases.MenuItemsTest.items")
+	public void addingToCart() throws InterruptedException {
 
 		beverages.addingItems();
 

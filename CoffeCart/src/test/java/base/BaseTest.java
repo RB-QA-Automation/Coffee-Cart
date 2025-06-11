@@ -6,14 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
-	public WebDriver driver;
-	public WebDriverWait wait;
+	public static WebDriver driver;
+	public static WebDriverWait wait;
 
-	@BeforeMethod
+	@BeforeTest
 	public void launch() {
 
 		driver = new ChromeDriver();
@@ -25,12 +27,12 @@ public class BaseTest {
 
 	}
 
-	@AfterMethod
+	@AfterTest
 	public void close() throws InterruptedException {
 
 		Thread.sleep(3000);
 
-		driver.close();
+		driver.quit();
 
 	}
 

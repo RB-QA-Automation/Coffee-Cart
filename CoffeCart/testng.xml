@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CoffeCart">
+	<test thread-count="5" name="PurchaseCoffeeEndToEnd">
+		<classes>
+			<class name="testCases.MenuItemsTest" />
+			
+			<class name="testCases.AddItemsToCartTest" />
+			
+			<class name="testCases.ViewCartTest" />
+		</classes>
+	</test> <!-- PurchaseCoffeeEndToEnd -->
+</suite> <!-- CoffeCart -->
