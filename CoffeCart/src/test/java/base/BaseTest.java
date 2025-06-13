@@ -12,8 +12,8 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
-	public static WebDriver driver;
-	public static WebDriverWait wait;
+	public WebDriver driver;
+	public WebDriverWait wait;
 
 	@BeforeTest
 	public void launch() {

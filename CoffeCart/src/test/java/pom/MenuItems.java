@@ -11,14 +11,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MenuItems {
+import base.BasePage;
 
-	private WebDriverWait wait;
+public class MenuItems extends BasePage{
 
-	public MenuItems(WebDriver driver, WebDriverWait wait) {
 
+	public MenuItems(WebDriver driver) {
+
+		super(driver);
 		PageFactory.initElements(driver, this);
-		this.wait = wait;
 
 	}
 

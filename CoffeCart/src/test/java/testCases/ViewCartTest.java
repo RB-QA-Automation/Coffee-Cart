@@ -1,6 +1,7 @@
 package testCases;
 
 import org.testng.annotations.Test;
+
 import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -17,7 +18,7 @@ public class ViewCartTest extends BaseTest {
 	@BeforeMethod
 	public void pageSetup() {
 
-		cart = new ViewCart(driver, wait);
+		cart = new ViewCart(driver);
 
 	}
 

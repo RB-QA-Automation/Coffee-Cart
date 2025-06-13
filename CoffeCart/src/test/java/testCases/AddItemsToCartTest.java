@@ -16,7 +16,7 @@ public class AddItemsToCartTest extends BaseTest {
 	@BeforeMethod
 	public void pageSetup() {
 
-		beverages = new AddItemsToCart(driver, wait);
+		beverages = new AddItemsToCart(driver);
 	}
 
 	@Test(dependsOnMethods = "testCases.MenuItemsTest.items")

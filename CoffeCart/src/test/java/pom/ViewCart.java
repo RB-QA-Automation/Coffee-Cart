@@ -10,14 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ViewCart {
+import base.BasePage;
 
-	private WebDriverWait wait;
+public class ViewCart extends BasePage {
 
-	public ViewCart(WebDriver driver, WebDriverWait wait) {
+	public ViewCart(WebDriver driver) {
 
+		super(driver);
 		PageFactory.initElements(driver, this);
-		this.wait = wait;
 
 	}
 
@@ -68,7 +68,7 @@ public class ViewCart {
 
 			String lastOrder = items.get(i).getText();
 			allItemsTxt.append(lastOrder);
-			System.out.println(lastOrder);
+			System.out.println("Final Orders:" + " " + lastOrder);
 		}
 		return allItemsTxt.toString();
 

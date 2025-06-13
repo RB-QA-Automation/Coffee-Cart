@@ -4,10 +4,12 @@
 	<test thread-count="5" name="PurchaseCoffeeEndToEnd">
 		<classes>
 			<class name="testCases.MenuItemsTest" />
-			
+
 			<class name="testCases.AddItemsToCartTest" />
-			
+
 			<class name="testCases.ViewCartTest" />
+
+
 		</classes>
 	</test> <!-- PurchaseCoffeeEndToEnd -->
 </suite> <!-- CoffeCart -->

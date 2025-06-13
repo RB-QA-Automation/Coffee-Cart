@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AddItemsToCart {
+import base.BasePage;
 
-	private WebDriverWait wait;
+public class AddItemsToCart extends BasePage {
 
-	public AddItemsToCart(WebDriver driver, WebDriverWait wait) {
+	public AddItemsToCart(WebDriver driver) {
 
+		super(driver);
 		PageFactory.initElements(driver, this);
-		this.wait = wait;
 
 	}
 

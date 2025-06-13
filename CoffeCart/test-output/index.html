@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CoffeCart" class="navigator-link">
-              <span class="suite-name border-passed">CoffeCart</span>
+              <span class="suite-name border-failed">CoffeCart</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CoffeCart" class="hide-methods failed suite-CoffeCart"> (hide)</a> <!-- hide-methods failed suite-CoffeCart -->
+                      <a href="#" panel-name="suite-CoffeCart" class="show-methods failed suite-CoffeCart"> (show)</a> <!-- show-methods failed suite-CoffeCart -->
+                    </span>
+                    <div class="method-list-content failed suite-CoffeCart">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CoffeCart" title="testCases.AddItemsToCartTest" class="method navigator-link" hash-for-method="addingToCart">addingToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CoffeCart" title="testCases.ViewCartTest" class="method navigator-link" hash-for-method="updatedCart">updatedCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-CoffeCart -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +122,7 @@
                     <div class="method-list-content passed suite-CoffeCart">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CoffeCart" title="testCases.AddItemsToCartTest" class="method navigator-link" hash-for-method="addingToCart">addingToCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-CoffeCart" title="testCases.MenuItemsTest" class="method navigator-link" hash-for-method="items">items</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CoffeCart" title="testCases.ViewCartTest" class="method navigator-link" hash-for-method="updatedCart">updatedCart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-CoffeCart -->
@@ -128,9 +137,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CoffeCart" class="panel CoffeCart">
-          <div class="suite-CoffeCart-class-passed">
+          <div class="suite-CoffeCart-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testCases.AddItemsToCartTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -139,13 +148,22 @@
                   <a name="addingToCart">
                   </a> <!-- addingToCart -->
                   <span class="method-name">addingToCart</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at pom.AddItemsToCart.addingItems(AddItemsToCart.java:44)
+	at testCases.AddItemsToCartTest.addingToCart(AddItemsToCartTest.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CoffeCart-class-passed -->
-          <div class="suite-CoffeCart-class-passed">
+          </div> <!-- suite-CoffeCart-class-failed -->
+          <div class="suite-CoffeCart-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testCases.ViewCartTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -154,10 +172,19 @@
                   <a name="updatedCart">
                   </a> <!-- updatedCart -->
                   <span class="method-name">updatedCart</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at pom.ViewCart.currentTotal(ViewCart.java:43)
+	at testCases.ViewCartTest.updatedCart(ViewCartTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CoffeCart-class-passed -->
+          </div> <!-- suite-CoffeCart-class-failed -->
           <div class="suite-CoffeCart-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -229,22 +256,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'updatedCart')
-data.setCell(0, 2, 'testCases.ViewCartTest')
-data.setCell(0, 3, 129);
+data.setCell(0, 1, 'items')
+data.setCell(0, 2, 'testCases.MenuItemsTest')
+data.setCell(0, 3, 36);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addingToCart')
 data.setCell(1, 2, 'testCases.AddItemsToCartTest')
-data.setCell(1, 3, 121);
+data.setCell(1, 3, 1);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'items')
-data.setCell(2, 2, 'testCases.MenuItemsTest')
-data.setCell(2, 3, 35);
+data.setCell(2, 1, 'updatedCart')
+data.setCell(2, 2, 'testCases.ViewCartTest')
+data.setCell(2, 3, 1);
 window.suiteTableData['CoffeCart']= { tableData: data, tableDiv: 'times-div-CoffeCart'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 285 ms</span>
+              <span class="suite-total-time">Total running time: 38 ms</span>
               <div id="times-div-CoffeCart">
               </div> <!-- times-div-CoffeCart -->
             </div> <!-- times-div -->
@@ -295,40 +322,44 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">1864 ms</span>
+                <span class="method-start">1497 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">items</span>
-                <span class="method-start">1868 ms</span>
+                <span class="method-start">1502 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.AddItemsToCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">1905 ms</span>
+                <span class="method-start">1540 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">addingToCart</span>
-                <span class="method-start">1907 ms</span>
+                <span class="method-start">1542 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.ViewCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">2029 ms</span>
+                <span class="method-start">1544 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">updatedCart</span>
-                <span class="method-start">2030 ms</span>
+                <span class="method-start">1544 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.MenuItemsTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">close</span>
-                <span class="method-start">2159 ms</span>
+                <span class="method-start">1545 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
