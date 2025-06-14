@@ -5,12 +5,20 @@
     <classes>
       <class name="testCases.AddItemsToCartTest">
         <methods>
-          <include name="pageSetup"/>
           <include name="addingToCart"/>
+          <include name="pageSetup"/>
           <include name="launch"/>
           <include name="close"/>
         </methods>
       </class> <!-- testCases.AddItemsToCartTest -->
+      <class name="testCases.PaymentTest">
+        <methods>
+          <include name="pageSetup"/>
+          <include name="launch"/>
+          <include name="purchaseFlow"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- testCases.PaymentTest -->
       <class name="testCases.ViewCartTest">
         <methods>
           <include name="launch"/>
@@ -22,8 +30,8 @@
       <class name="testCases.MenuItemsTest">
         <methods>
           <include name="launch"/>
-          <include name="items"/>
           <include name="pageSetup"/>
+          <include name="items"/>
           <include name="close"/>
         </methods>
       </class> <!-- testCases.MenuItemsTest -->

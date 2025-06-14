@@ -9,6 +9,7 @@
 
 			<class name="testCases.ViewCartTest" />
 
+			<class name="testCases.PaymentTest" />
 
 		</classes>
 	</test> <!-- PurchaseCoffeeEndToEnd -->

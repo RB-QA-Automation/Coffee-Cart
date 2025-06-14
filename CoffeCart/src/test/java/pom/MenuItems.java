@@ -3,14 +3,13 @@ package pom;
 import java.util.ArrayList;
 
 
+
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import base.BasePage;
 
 public class MenuItems extends BasePage{

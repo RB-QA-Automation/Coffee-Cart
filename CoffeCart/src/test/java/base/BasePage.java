@@ -50,13 +50,11 @@ public class BasePage {
 			System.out.println("No alert was present to accept");
 
 		}
-		
-		
+
 	}
-	
+
 	public void dismissAlert() {
-		
-		
+
 	}
 
 }

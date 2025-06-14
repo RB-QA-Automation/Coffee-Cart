@@ -1,11 +1,9 @@
 package testCases;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
 import base.BaseTest;
 import pom.AddItemsToCart;
 

@@ -1,15 +1,10 @@
 package testCases;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
+import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
-import pom.AddItemsToCart;
 import pom.Payment;
-import pom.ViewCart;
 
 public class PaymentTest extends BaseTest {
 
@@ -22,10 +17,12 @@ public class PaymentTest extends BaseTest {
 
 	}
 
-	@Test(dependsOnMethods = "testCases.AddItemsToCartTest.updatedCart")
+	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart")
 	public void purchaseFlow() {
 
 		pay.paymentDetails();
+
+		String confirmationMsg;
 
 	}
 
