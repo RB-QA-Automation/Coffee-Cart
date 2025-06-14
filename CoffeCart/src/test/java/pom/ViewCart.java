@@ -38,7 +38,7 @@ public class ViewCart extends BasePage {
 	@FindBy(css = "li[class$='list-item'] div:nth-child(1)")
 	List<WebElement> items;
 
-	public String currentTotal() {
+	public String currentTotal()  {
 
 		cartBtn.click();
 		String cartTotal = amount.getText();
@@ -48,7 +48,7 @@ public class ViewCart extends BasePage {
 	}
 
 	public void addAndRemove() {
-
+		
 		addCafeBreve.click();
 		removeMocha.click();
 

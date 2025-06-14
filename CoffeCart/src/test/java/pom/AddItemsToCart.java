@@ -39,7 +39,7 @@ public class AddItemsToCart extends BasePage {
 	@FindBy(xpath = "//div[@class='promo']//button[2]")
 	WebElement no;
 
-	public void addingItems() throws InterruptedException {
+	public void addingItems() {
 
 		espresso.click();
 		mocha.click();
@@ -77,6 +77,7 @@ public class AddItemsToCart extends BasePage {
 	public void declinePromoOffer() {
 
 		wait.until(ExpectedConditions.visibilityOf(no));
+
 		no.click();
 
 	}

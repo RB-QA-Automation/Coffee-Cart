@@ -50,6 +50,7 @@ public class Payment extends BasePage {
 
 		wait.until(ExpectedConditions.visibilityOf(confirmMsg));
 		String txt = confirmMsg.getText();
+		System.out.println("Purchase Confirmation Message: " + " " +  txt);
 		return txt;
 
 	}
