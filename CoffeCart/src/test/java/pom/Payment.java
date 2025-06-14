@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import base.BasePage;
 
 public class Payment extends BasePage {
@@ -31,6 +33,9 @@ public class Payment extends BasePage {
 	@FindBy(xpath = "//button[@id='submit-payment']")
 	WebElement submitBtn;
 
+	@FindBy(css = "div[role='button']")
+	WebElement confirmMsg;
+
 	public void paymentDetails() {
 
 		purchaseBtn.click();
@@ -38,6 +43,14 @@ public class Payment extends BasePage {
 		email.sendKeys("rajabhamra@gmail.com");
 		checkBox.click();
 		submitBtn.click();
+
+	}
+
+	public String paymentMsg() {
+
+		wait.until(ExpectedConditions.visibilityOf(confirmMsg));
+		String txt = confirmMsg.getText();
+		return txt;
 
 	}
 
