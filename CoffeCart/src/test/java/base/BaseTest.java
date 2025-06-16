@@ -20,7 +20,7 @@ public class BaseTest {
 		
 		ChromeOptions options = new ChromeOptions();
 		
-		options.addArguments("--headless");
+		// options.addArguments("--headless");
 		options.addArguments("--disable-gpu");
 		options.addArguments("--window-size=1920,1080"); // Set a standard window size
 		options.addArguments("--no-sandbox"); // A sandbox is a security mechanism; disabling it can help avoid permission issues in a server environment
@@ -29,7 +29,6 @@ public class BaseTest {
 
 		driver = new ChromeDriver(options);
 		
-		driver = new ChromeDriver();
 		driver.get("https://coffee-cart.app/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

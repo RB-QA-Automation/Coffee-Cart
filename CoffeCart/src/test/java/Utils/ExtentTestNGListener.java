@@ -33,6 +33,15 @@ public class ExtentTestNGListener implements ITestListener {
 	}
 
 	@Override
+	public void onTestStart(ITestResult result) {
+
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),
+				result.getMethod().getDescription());
+		test.set(extentTest);
+
+	}
+
+	@Override
 	public void onTestSuccess(ITestResult result) {
 
 		test.get().log(Status.PASS, "Test Case Passed!");
