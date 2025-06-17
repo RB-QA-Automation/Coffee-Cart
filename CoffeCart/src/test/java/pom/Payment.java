@@ -36,11 +36,11 @@ public class Payment extends BasePage {
 	@FindBy(css = "div[role='button']")
 	WebElement confirmMsg;
 
-	public void paymentDetails() {
+	public void paymentDetails(String customerName, String customerEmail) {
 
 		purchaseBtn.click();
-		name.sendKeys("Raja Bhamra");
-		email.sendKeys("rajabhamra@gmail.com");
+		name.sendKeys(customerName);
+		email.sendKeys(customerEmail);
 		checkBox.click();
 		submitBtn.click();
 
