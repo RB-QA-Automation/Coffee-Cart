@@ -25,7 +25,7 @@ public class ExcelReader {
 
 		DataFormatter formatter = new DataFormatter();
 
-		for (int i = 0; i < rowCount; i++) {
+		for (int i = 1; i < rowCount; i++) {
 
 			for (int j = 0; j < colCount; j++) {
 
