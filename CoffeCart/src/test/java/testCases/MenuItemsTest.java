@@ -20,7 +20,7 @@ public class MenuItemsTest extends BaseTest {
 		coffeesListed = new MenuItems(driver);
 	}
 
-	@Test
+	@Test(groups = {"singleuser"})
 	public void items() {
 
 		// There is a data mismatch for the prices, had to update prices in the script manually

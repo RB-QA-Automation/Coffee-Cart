@@ -19,7 +19,7 @@ public class ViewCartTest extends BaseTest {
 
 	}
 
-	@Test(dependsOnMethods = "testCases.AddItemsToCartTest.addingToCart")
+	@Test(dependsOnMethods = "testCases.AddItemsToCartTest.addingToCart", groups = {"singleuser"})
 
 	public void updatedCart() {
 

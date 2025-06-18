@@ -16,6 +16,8 @@ import pom.PaymentSingleUser;
 
 public class PaymentTestSingleUserTest extends BaseTest {
 	
+	
+	
 	PaymentSingleUser pay;
 
 	@BeforeMethod
@@ -34,7 +36,7 @@ public class PaymentTestSingleUserTest extends BaseTest {
 
 	}
 
-	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart")
+	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = {"singleuser"})
 	public void purchaseFlow() {
 
 		pay.paymentDetails();
