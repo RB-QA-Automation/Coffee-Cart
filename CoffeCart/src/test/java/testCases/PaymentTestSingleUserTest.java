@@ -15,9 +15,7 @@ import pom.PaymentMultipleUser;
 import pom.PaymentSingleUser;
 
 public class PaymentTestSingleUserTest extends BaseTest {
-	
-	
-	
+
 	PaymentSingleUser pay;
 
 	@BeforeMethod
@@ -27,16 +25,7 @@ public class PaymentTestSingleUserTest extends BaseTest {
 
 	}
 
-	@DataProvider(name = "paymentData")
-	public Object[][] paymentDataProvider() throws IOException {
-
-		String filePath = "src/test/java/resources/Data Driven Testing - Coffee Cart.xlsx";
-
-		return ExcelReader.getTestData(filePath, "Sheet1");
-
-	}
-
-	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = {"singleuser"})
+	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = { "singleuser" })
 	public void purchaseFlow() {
 
 		pay.paymentDetails();
@@ -48,7 +37,5 @@ public class PaymentTestSingleUserTest extends BaseTest {
 		Assert.assertEquals(actualMsg, expectedMsg);
 
 	}
-	
-
 
 }

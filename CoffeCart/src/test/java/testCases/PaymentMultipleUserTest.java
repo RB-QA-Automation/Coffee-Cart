@@ -18,18 +18,19 @@ import pom.ViewCart;
 
 public class PaymentMultipleUserTest extends BaseTest {
 
-	MenuItems coffeesListed;
-
-	AddItemsToCart beverages;
-	ViewCart cart;
-
-	PaymentMultipleUser pay;
+	MenuItems coffeesListedd;
+	AddItemsToCart beveragess;
+	ViewCart carts;
+	PaymentMultipleUser pays;
 
 	@BeforeMethod
 	public void pageSetup() {
 
-		pay = new PaymentMultipleUser(driver);
-		beverages = new AddItemsToCart(driver);
+		// Initializing all Page Objects before any test method runs
+		pays = new PaymentMultipleUser(driver);
+		beveragess = new AddItemsToCart(driver);
+		coffeesListedd = new MenuItems(driver);
+		carts = new ViewCart(driver);
 
 	}
 
@@ -42,11 +43,10 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 	}
 
-	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", dataProvider = "paymentData", groups = {
-			"multipletestuser" })
+	//@Test(dataProvider = "paymentData", groups = { "multipletestuser" })
 	public void purchaseFlow(String nameFromExcel, String emailFromExcel) {
 
-		List<String> actualCoffees = coffeesListed.coffeeNames();
+		List<String> actualCoffees = coffeesListedd.coffeeNames();
 
 		List<String> expectedNames = Arrays.asList("Espresso", "Espresso Macchiato", "Cappuccino", "Mocha",
 				"Flat White", "Americano", "Cafe Latte", "Espresso Con Panna", "Cafe Breve");
@@ -69,45 +69,45 @@ public class PaymentMultipleUserTest extends BaseTest {
 					+ " did not contain the expected price. Expected '" + expectedPrice + "' in '" + actualData + "'");
 		}
 
-		beverages.addingItems();
+		beveragess.addingItems();
 
-		String finalPrice = beverages.totalCost();
+		String finalPrice = beveragess.totalCost();
 
 		String expectedPrice = "Total: $33.00";
 
 		Assert.assertEquals(finalPrice, expectedPrice, "The total cost is incorrect");
 
-		String proTxt = beverages.promoText();
+		String proTxt = beveragess.promoText();
 
 		String actualProText = "It's your lucky day! Get an extra cup of Mocha for $4.";
 
 		Assert.assertEquals(proTxt, actualProText, "The promotion text does not match");
 
-		String updatedCost = beverages.acceptPromoOffer();
+		String updatedCost = beveragess.acceptPromoOffer();
 
 		String expectedNewCost = "Total: $37.00";
 
 		Assert.assertEquals(updatedCost, expectedNewCost, "The updated price is incorrect");
 
-		String currentPriceDisplayed = cart.currentTotal();
+		String currentPriceDisplayed = carts.currentTotal();
 
 		String currentExpected = "Total: $37.00";
 
 		Assert.assertEquals(currentPriceDisplayed, currentExpected);
 
-		cart.addAndRemove();
+		carts.addAndRemove();
 
-		String finalPrices = cart.finalTotal();
+		String finalPrices = carts.finalTotal();
 
 		String finalExpected = "Total: $44.00";
 
 		Assert.assertEquals(finalPrices, finalExpected);
 
-		cart.finalItems();
+		carts.finalItems();
 
-		pay.paymentDetails(nameFromExcel, emailFromExcel);
+		pays.paymentDetails(nameFromExcel, emailFromExcel);
 
-		String actualMsg = pay.paymentMsg();
+		String actualMsg = pays.paymentMsg();
 
 		String expectedMsg = "Thanks for your purchase. Please check your email for payment.";
 
