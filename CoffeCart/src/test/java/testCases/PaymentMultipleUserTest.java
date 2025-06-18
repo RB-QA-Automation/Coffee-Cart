@@ -43,7 +43,7 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 	}
 
-	//@Test(dataProvider = "paymentData", groups = { "multipletestuser" })
+	@Test(dataProvider = "paymentData", groups = { "multipletestuser" })
 	public void purchaseFlow(String nameFromExcel, String emailFromExcel) {
 
 		List<String> actualCoffees = coffeesListedd.coffeeNames();
