@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-17T18:41:06 BST" name="CoffeCart" finished-at="2025-06-17T18:41:16 BST" duration-ms="9426">
+  <suite started-at="2025-06-18T18:27:29 BST" name="CoffeCart" finished-at="2025-06-18T18:27:36 BST" duration-ms="6418">
     <groups>
     </groups>
-    <test started-at="2025-06-17T18:41:06 BST" name="PurchaseCoffeeEndToEnd" finished-at="2025-06-17T18:41:16 BST" duration-ms="9426">
-      <class name="testCases.PaymentTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:08 BST" name="pageSetup" finished-at="2025-06-17T18:41:08 BST" duration-ms="1" status="PASS">
+    <test started-at="2025-06-18T18:27:29 BST" name="PurchaseCoffeeEndToEnd" finished-at="2025-06-18T18:27:36 BST" duration-ms="6418">
+      <class name="testCases.EndToEndPurchaseTest">
+        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:29 BST" name="launch" finished-at="2025-06-18T18:27:30 BST" duration-ms="1137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:31 BST" name="pageSetup" finished-at="2025-06-18T18:27:31 BST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:08 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-06-17T18:41:09 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="678" status="PASS">
+        <test-method signature="purchase(java.lang.String,java.lang.String)[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:31 BST" name="purchase" data-provider="paymentData" finished-at="2025-06-18T18:27:32 BST" duration-ms="958" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,12 +30,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- purchaseFlow -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:09 BST" name="pageSetup" finished-at="2025-06-17T18:41:09 BST" duration-ms="1" status="PASS">
+        </test-method> <!-- purchase -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:32 BST" name="pageSetup" finished-at="2025-06-18T18:27:32 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:09 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-06-17T18:41:10 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="1071" status="FAIL">
+        <test-method signature="purchase(java.lang.String,java.lang.String)[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:32 BST" name="purchase" data-provider="paymentData" finished-at="2025-06-18T18:27:32 BST" duration-ms="335" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,79 +48,14 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (1783, 867). Other element would receive the click: <div data-v-0c450641="" class="snackbar success" role="button" style="">...</div>
-  (Session info: chrome=137.0.7151.104)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71655fd6ca9721cad623d54b3625abed, clickElement {id=f.AA1A5EA10E6E91B3B785970B6411E3F3.d.90549DB844A1F2621D701B0F0CCDFCD4.e.48}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50998}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50998/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (71655fd6ca9721cad623d54b3625abed)] -> css selector: button[aria-label='Proceed to checkout']]
-Session ID: 71655fd6ca9721cad623d54b3625abed]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (1783, 867). Other element would receive the click: <div data-v-0c450641="" class="snackbar success" role="button" style="">...</div>
-  (Session info: chrome=137.0.7151.104)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71655fd6ca9721cad623d54b3625abed, clickElement {id=f.AA1A5EA10E6E91B3B785970B6411E3F3.d.90549DB844A1F2621D701B0F0CCDFCD4.e.48}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50998}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50998/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (71655fd6ca9721cad623d54b3625abed)] -> css selector: button[aria-label='Proceed to checkout']]
-Session ID: 71655fd6ca9721cad623d54b3625abed
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-at pom.Payment.paymentDetails(Payment.java:41)
-at testCases.PaymentTest.purchaseFlow(PaymentTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- purchaseFlow -->
-        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:10 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-06-17T18:41:11 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="1074" status="FAIL">
+        </test-method> <!-- purchase -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:32 BST" name="pageSetup" finished-at="2025-06-18T18:27:32 BST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="purchase(java.lang.String,java.lang.String)[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:32 BST" name="purchase" data-provider="paymentData" finished-at="2025-06-18T18:27:32 BST" duration-ms="371" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -129,83 +68,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (1783, 867). Other element would receive the click: <div data-v-0c450641="" class="snackbar success" role="button" style="">...</div>
-  (Session info: chrome=137.0.7151.104)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71655fd6ca9721cad623d54b3625abed, clickElement {id=f.AA1A5EA10E6E91B3B785970B6411E3F3.d.90549DB844A1F2621D701B0F0CCDFCD4.e.48}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50998}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50998/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (71655fd6ca9721cad623d54b3625abed)] -> css selector: button[aria-label='Proceed to checkout']]
-Session ID: 71655fd6ca9721cad623d54b3625abed]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (1783, 867). Other element would receive the click: <div data-v-0c450641="" class="snackbar success" role="button" style="">...</div>
-  (Session info: chrome=137.0.7151.104)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71655fd6ca9721cad623d54b3625abed, clickElement {id=f.AA1A5EA10E6E91B3B785970B6411E3F3.d.90549DB844A1F2621D701B0F0CCDFCD4.e.48}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50998}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50998/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (71655fd6ca9721cad623d54b3625abed)] -> css selector: button[aria-label='Proceed to checkout']]
-Session ID: 71655fd6ca9721cad623d54b3625abed
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-at pom.Payment.paymentDetails(Payment.java:41)
-at testCases.PaymentTest.purchaseFlow(PaymentTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- purchaseFlow -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:10 BST" name="pageSetup" finished-at="2025-06-17T18:41:10 BST" duration-ms="0" status="PASS">
+        </test-method> <!-- purchase -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:32 BST" name="pageSetup" finished-at="2025-06-18T18:27:32 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:11 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-06-17T18:41:13 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="1047" status="FAIL">
+        <test-method signature="purchase(java.lang.String,java.lang.String)[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:32 BST" name="purchase" data-provider="paymentData" finished-at="2025-06-18T18:27:33 BST" duration-ms="323" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -218,121 +88,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (1783, 867). Other element would receive the click: <div data-v-0c450641="" class="snackbar success fade-leave-active fade-leave-to" role="button" style="">...</div>
-  (Session info: chrome=137.0.7151.104)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71655fd6ca9721cad623d54b3625abed, clickElement {id=f.AA1A5EA10E6E91B3B785970B6411E3F3.d.90549DB844A1F2621D701B0F0CCDFCD4.e.48}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50998}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50998/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (71655fd6ca9721cad623d54b3625abed)] -> css selector: button[aria-label='Proceed to checkout']]
-Session ID: 71655fd6ca9721cad623d54b3625abed]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (1783, 867). Other element would receive the click: <div data-v-0c450641="" class="snackbar success fade-leave-active fade-leave-to" role="button" style="">...</div>
-  (Session info: chrome=137.0.7151.104)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71655fd6ca9721cad623d54b3625abed, clickElement {id=f.AA1A5EA10E6E91B3B785970B6411E3F3.d.90549DB844A1F2621D701B0F0CCDFCD4.e.48}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50998}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50998/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (71655fd6ca9721cad623d54b3625abed)] -> css selector: button[aria-label='Proceed to checkout']]
-Session ID: 71655fd6ca9721cad623d54b3625abed
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-at pom.Payment.paymentDetails(Payment.java:41)
-at testCases.PaymentTest.purchaseFlow(PaymentTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- purchaseFlow -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTest@42e25b0b]" started-at="2025-06-17T18:41:11 BST" name="pageSetup" finished-at="2025-06-17T18:41:11 BST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-      </class> <!-- testCases.PaymentTest -->
-      <class name="testCases.AddItemsToCartTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.AddItemsToCartTest@189cbd7c]" started-at="2025-06-17T18:41:08 BST" name="pageSetup" finished-at="2025-06-17T18:41:08 BST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@189cbd7c]" started-at="2025-06-17T18:41:08 BST" name="addingToCart" finished-at="2025-06-17T18:41:08 BST" depends-on-methods="testCases.MenuItemsTest.items" duration-ms="124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addingToCart -->
-      </class> <!-- testCases.AddItemsToCartTest -->
-      <class name="testCases.MenuItemsTest">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.MenuItemsTest@205d38da]" started-at="2025-06-17T18:41:06 BST" name="launch" finished-at="2025-06-17T18:41:08 BST" duration-ms="1305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.MenuItemsTest@205d38da]" started-at="2025-06-17T18:41:08 BST" name="pageSetup" finished-at="2025-06-17T18:41:08 BST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="items()[pri:0, instance:testCases.MenuItemsTest@205d38da]" started-at="2025-06-17T18:41:08 BST" name="items" finished-at="2025-06-17T18:41:08 BST" duration-ms="41" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- items -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testCases.MenuItemsTest@205d38da]" started-at="2025-06-17T18:41:13 BST" name="close" finished-at="2025-06-17T18:41:16 BST" duration-ms="3094" status="PASS">
+        </test-method> <!-- purchase -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testCases.EndToEndPurchaseTest@26b3fd41]" started-at="2025-06-18T18:27:33 BST" name="close" finished-at="2025-06-18T18:27:36 BST" duration-ms="3096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- testCases.MenuItemsTest -->
-      <class name="testCases.ViewCartTest">
-        <test-method signature="updatedCart()[pri:0, instance:testCases.ViewCartTest@7bf3a5d8]" started-at="2025-06-17T18:41:08 BST" name="updatedCart" finished-at="2025-06-17T18:41:08 BST" depends-on-methods="testCases.AddItemsToCartTest.addingToCart" duration-ms="143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatedCart -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.ViewCartTest@7bf3a5d8]" started-at="2025-06-17T18:41:08 BST" name="pageSetup" finished-at="2025-06-17T18:41:08 BST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-      </class> <!-- testCases.ViewCartTest -->
+      </class> <!-- testCases.EndToEndPurchaseTest -->
     </test> <!-- PurchaseCoffeeEndToEnd -->
   </suite> <!-- CoffeCart -->
 </testng-results>

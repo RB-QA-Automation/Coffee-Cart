@@ -24,16 +24,8 @@ public class PaymentTest extends BaseTest {
 
 	}
 
-	@DataProvider(name = "paymentData")
-	public Object[][] paymentDataProvider() throws IOException {
 
-		String filePath = "src/test/java/resources/Data Driven Testing - Coffee Cart.xlsx";
-
-		return ExcelReader.getTestData(filePath, "Sheet1");
-
-	}
-
-	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", dataProvider = "paymentData")
+	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart")
 	public void purchaseFlow(String nameFromExcel, String emailFromExcel) {
 
 		pay.paymentDetails(nameFromExcel, emailFromExcel);
