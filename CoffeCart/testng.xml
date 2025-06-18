@@ -2,21 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="CoffeCart">
 
-	<test thread-count="5" name="PurchaseCoffeeEndToEnd_SingleUser">
-	
-		<groups>
-			<run>
-				<include name="singleuser"/>
-			</run>
-		</groups>
-		
+	<test thread-count="5" name="PurchaseCoffeeEndToEnd">
 		<classes>
 			<class name="testCases.MenuItemsTest" />
+
 			<class name="testCases.AddItemsToCartTest" />
+
 			<class name="testCases.ViewCartTest" />
+
 			<class name="testCases.PaymentTestSingleUserTest" />
+
 		</classes>
-		
-	</test>
-	
-	 </suite> 
+	</test> <!-- PurchaseCoffeeEndToEnd -->
+</suite> <!-- CoffeCart -->
