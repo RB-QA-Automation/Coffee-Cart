@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Coffee Cart End-to-End Test Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Purchase Flow Test(failed)">
+<suite name="Failed suite [CoffeCart]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="PurchaseCoffeeEndToEnd(failed)">
     <classes>
-      <class name="testCases.EndToEndPurchaseTest">
+      <class name="testCases.PaymentTest">
         <methods>
+          <include name="pageSetup"/>
           <include name="launch"/>
-          <include name="testCompletePurchaseFlow" invocation-numbers="0 1 2 3"/>
+          <include name="purchaseFlow"/>
           <include name="close"/>
         </methods>
-      </class> <!-- testCases.EndToEndPurchaseTest -->
+      </class> <!-- testCases.PaymentTest -->
+      <class name="testCases.MenuItemsTest">
+        <methods>
+          <include name="launch"/>
+          <include name="pageSetup"/>
+          <include name="items"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- testCases.MenuItemsTest -->
+      <class name="testCases.AddItemsToCartTest">
+        <methods>
+          <include name="addingToCart"/>
+          <include name="pageSetup"/>
+          <include name="launch"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- testCases.AddItemsToCartTest -->
+      <class name="testCases.ViewCartTest">
+        <methods>
+          <include name="launch"/>
+          <include name="updatedCart"/>
+          <include name="close"/>
+          <include name="pageSetup"/>
+        </methods>
+      </class> <!-- testCases.ViewCartTest -->
     </classes>
-  </test> <!-- Purchase Flow Test(failed) -->
-</suite> <!-- Failed suite [Coffee Cart End-to-End Test Suite] -->
+  </test> <!-- PurchaseCoffeeEndToEnd(failed) -->
+</suite> <!-- Failed suite [CoffeCart] -->

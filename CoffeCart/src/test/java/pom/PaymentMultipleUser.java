@@ -9,9 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BasePage;
 
-public class Payment extends BasePage {
+public class PaymentMultipleUser extends BasePage {
 
-	public Payment(WebDriver driver) {
+	public PaymentMultipleUser(WebDriver driver) {
 
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -36,11 +36,11 @@ public class Payment extends BasePage {
 	@FindBy(css = "div[role='button']")
 	WebElement confirmMsg;
 
-	public void paymentDetails(String customerName, String customerEmail) {
+	public void paymentDetails(String excelName, String excelEmail) {
 
 		purchaseBtn.click();
-		name.sendKeys(customerName);
-		email.sendKeys(customerEmail);
+		name.sendKeys(excelName);
+		email.sendKeys(excelEmail);
 		checkBox.click();
 		submitBtn.click();
 
@@ -50,7 +50,7 @@ public class Payment extends BasePage {
 
 		wait.until(ExpectedConditions.visibilityOf(confirmMsg));
 		String txt = confirmMsg.getText();
-		System.out.println("Purchase Confirmation Message: " + " " +  txt);
+		System.out.println("Purchase Confirmation Message: " + " " + txt);
 		return txt;
 
 	}

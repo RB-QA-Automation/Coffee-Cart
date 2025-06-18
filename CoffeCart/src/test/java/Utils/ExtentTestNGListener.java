@@ -1,7 +1,6 @@
-package Utilities;
+package Utils;
 
 import org.openqa.selenium.OutputType;
-
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -11,7 +10,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Utils.ExtentReportsManager;
 import base.BaseTest;
 
 public class ExtentTestNGListener implements ITestListener {

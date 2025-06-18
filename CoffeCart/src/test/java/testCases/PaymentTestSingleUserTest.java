@@ -11,24 +11,33 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 
 import base.BaseTest;
-import pom.Payment;
+import pom.PaymentMultipleUser;
+import pom.PaymentSingleUser;
 
-public class PaymentTest extends BaseTest {
-
-	Payment pay;
+public class PaymentTestSingleUserTest extends BaseTest {
+	
+	PaymentSingleUser pay;
 
 	@BeforeMethod
 	public void pageSetup() {
 
-		pay = new Payment(driver);
+		pay = new PaymentSingleUser(driver);
 
 	}
 
+	@DataProvider(name = "paymentData")
+	public Object[][] paymentDataProvider() throws IOException {
+
+		String filePath = "src/test/java/resources/Data Driven Testing - Coffee Cart.xlsx";
+
+		return ExcelReader.getTestData(filePath, "Sheet1");
+
+	}
 
 	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart")
-	public void purchaseFlow(String nameFromExcel, String emailFromExcel) {
+	public void purchaseFlow() {
 
-		pay.paymentDetails(nameFromExcel, emailFromExcel);
+		pay.paymentDetails();
 
 		String actualMsg = pay.paymentMsg();
 
@@ -37,5 +46,7 @@ public class PaymentTest extends BaseTest {
 		Assert.assertEquals(actualMsg, expectedMsg);
 
 	}
+	
+
 
 }
