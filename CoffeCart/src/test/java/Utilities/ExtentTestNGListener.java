@@ -11,7 +11,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Utils.ExtentReportsManager;
 import base.BaseTest;
 
 public class ExtentTestNGListener implements ITestListener {
