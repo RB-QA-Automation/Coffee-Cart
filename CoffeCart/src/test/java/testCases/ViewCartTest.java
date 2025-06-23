@@ -12,7 +12,7 @@ public class ViewCartTest extends BaseTest {
 
 	ViewCart cart;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
 		cart = new ViewCart(driver);

@@ -2,8 +2,6 @@ package pom;
 
 import java.util.ArrayList;
 
-
-
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -12,8 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import base.BasePage;
 
-public class MenuItems extends BasePage{
-
+public class MenuItems extends BasePage {
 
 	public MenuItems(WebDriver driver) {
 
@@ -35,7 +32,7 @@ public class MenuItems extends BasePage{
 
 			names.add(itemsList);
 
-			System.out.println(itemsList);
+			System.out.println("Coffee Menu: " + " " + itemsList);
 
 		}
 

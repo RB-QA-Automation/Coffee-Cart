@@ -22,8 +22,9 @@ public class PaymentMultipleUserTest extends BaseTest {
 	AddItemsToCart beveragess;
 	ViewCart carts;
 	PaymentMultipleUser pays;
+	
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
 		// Initializing all Page Objects before any test method runs

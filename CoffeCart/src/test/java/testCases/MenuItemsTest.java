@@ -14,7 +14,7 @@ public class MenuItemsTest extends BaseTest {
 
 	MenuItems coffeesListed;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
 		coffeesListed = new MenuItems(driver);

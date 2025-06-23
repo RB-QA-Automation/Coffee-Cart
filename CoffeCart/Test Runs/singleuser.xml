@@ -2,11 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="CoffeCart">
 
-<listeners>
-        <listener class-name="Utilities.ExtentTestNGListener"/>
-    </listeners>
+	<listeners>
+		<listener class-name="Utilities.ExtentTestNGListener" />
+	</listeners>
 
-	<test thread-count="5" name="PurchaseCoffeeEndToEnd">
+	<test thread-count="5" name="SingleUserPurchaseTest">
+		<groups>
+			<run>
+
+				<include name="singleuser" />
+
+			</run>
+
+		</groups>
 		<classes>
 			<class name="testCases.MenuItemsTest" />
 
@@ -15,6 +23,8 @@
 			<class name="testCases.ViewCartTest" />
 
 			<class name="testCases.PaymentTestSingleUserTest" />
+
+
 
 		</classes>
 	</test> <!-- PurchaseCoffeeEndToEnd -->

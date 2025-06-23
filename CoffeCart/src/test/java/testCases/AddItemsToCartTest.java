@@ -2,6 +2,7 @@ package testCases;
 
 import org.testng.annotations.Test;
 
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
@@ -11,7 +12,7 @@ public class AddItemsToCartTest extends BaseTest {
 
 	AddItemsToCart beverages;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
 		beverages = new AddItemsToCart(driver);

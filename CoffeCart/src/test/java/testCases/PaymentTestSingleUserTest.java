@@ -18,7 +18,7 @@ public class PaymentTestSingleUserTest extends BaseTest {
 
 	PaymentSingleUser pay;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
 		pay = new PaymentSingleUser(driver);

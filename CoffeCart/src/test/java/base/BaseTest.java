@@ -15,7 +15,7 @@ public class BaseTest {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 
-	@BeforeTest
+	@BeforeTest(alwaysRun = true)
 	public void launch() {
 		
 		ChromeOptions options = new ChromeOptions();
@@ -37,12 +37,16 @@ public class BaseTest {
 
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun = true)
 	public void close() throws InterruptedException {
+		
+		if (driver != null) {
+			
+			Thread.sleep(3000);
+			driver.quit();
+		}
 
-		Thread.sleep(3000);
 
-		driver.quit();
 
 	}
 	
