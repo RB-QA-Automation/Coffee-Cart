@@ -23,6 +23,7 @@ public class ExtentTestNGListener implements ITestListener {
 	public void onStart(ITestContext contentx) {
 
 		System.out.println("Test Suite started!");
+		System.out.println("--------------------------------------------------");
 	}
 
 	@Override

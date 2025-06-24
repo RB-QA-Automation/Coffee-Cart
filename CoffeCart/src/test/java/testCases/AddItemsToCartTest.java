@@ -23,6 +23,8 @@ public class AddItemsToCartTest extends BaseTest {
 	public void addingToCart() throws InterruptedException {
 
 		beverages.addingItems();
+		
+		Thread.sleep(3000);
 
 		String finalPrice = beverages.totalCost();
 

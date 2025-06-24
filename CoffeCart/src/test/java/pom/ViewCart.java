@@ -43,6 +43,7 @@ public class ViewCart extends BasePage {
 		cartBtn.click();
 		String cartTotal = amount.getText();
 		System.out.println("Current total cost in cart is:" + " " + cartTotal);
+		System.out.println("--------------------------------------------------");
 		return cartTotal;
 
 	}
@@ -58,6 +59,7 @@ public class ViewCart extends BasePage {
 
 		String finalCost = amount.getText();
 		System.out.println("Final total cost is:" + " " + finalCost);
+		System.out.println("--------------------------------------------------");
 		return finalCost;
 
 	}

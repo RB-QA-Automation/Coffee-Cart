@@ -20,33 +20,32 @@ public class MenuItemsTest extends BaseTest {
 		coffeesListed = new MenuItems(driver);
 	}
 
-	@Test(groups = {"singleuser"})
-	public void items() {
+	@Test(groups = { "singleuser" })
+	public void items() throws InterruptedException {
 
-		// There is a data mismatch for the prices, had to update prices in the script manually
+		// There is a data mismatch for the prices, had to update prices in the script
+		// manually
 		// in order to pass test
+		
+		Thread.sleep(3000);
+
 
 		List<String> actualCoffees = coffeesListed.coffeeNames();
+		
+		Thread.sleep(3000);
 
-		List<String> expectedNames = Arrays.asList("Espresso", "Espresso Macchiato", "Cappuccino", "Mocha",
-				"Flat White", "Americano", "Cafe Latte", "Espresso Con Panna", "Cafe Breve");
 
-		List<String> expectedPrices = Arrays.asList("$10.00", "$12.00", "$19.00", "$8.00", "$18.00", "$7.00", "$16.00",
-				"$14.00", "$15.00");
+		List<String> expectedCoffeeData = Arrays.asList("Espresso $10.00", "Espresso Macchiato $12.00",
+				"Cappuccino $19.00", "Mocha $8.00", "Flat White $18.00", "Americano $7.00", "Cafe Latte $16.00",
+				"Espresso Con Panna $14.00", "Cafe Breve $15.00");
 
-		Assert.assertEquals(actualCoffees.size(), expectedNames.size());
+		Assert.assertEquals(actualCoffees.size(), expectedCoffeeData.size(),
+				"The number of actual coffees do not match the expected amount");
 
-		for (int i = 0; i < expectedNames.size(); i++) {
+		for (int i = 0; i < expectedCoffeeData.size(); i++) {
 
-			String actualData = actualCoffees.get(i);
-			String expectedName = expectedNames.get(i);
-			String expectedPrice = expectedPrices.get(i);
-
-			Assert.assertTrue(actualData.contains(expectedName), "Item #" + i
-					+ " did not contain the expected name. Expected '" + expectedName + "' in '" + actualData + "'");
-
-			Assert.assertTrue(actualData.contains(expectedPrice), "Item #" + i
-					+ " did not contain the expected price. Expected '" + expectedPrice + "' in '" + actualData + "'");
+			Assert.assertEquals(actualCoffees.get(i), expectedCoffeeData.get(i),
+					"Coffee data at index" + i + "does not match");
 		}
 
 	}

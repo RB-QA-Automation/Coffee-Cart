@@ -19,7 +19,7 @@ public class MenuItems extends BasePage {
 
 	}
 
-	@FindBy(tagName = "h4")
+	@FindBy(css = "li > h4")
 	public List<WebElement> coffees;
 
 	public List<String> coffeeNames() {
@@ -28,11 +28,12 @@ public class MenuItems extends BasePage {
 
 		for (WebElement nmes : coffees) {
 
-			String itemsList = nmes.getText();
+			String itemsList = nmes.getText().replace("\n", " ");
 
 			names.add(itemsList);
 
 			System.out.println("Coffee Menu: " + " " + itemsList);
+			System.out.println("--------------------------------------------------");
 
 		}
 

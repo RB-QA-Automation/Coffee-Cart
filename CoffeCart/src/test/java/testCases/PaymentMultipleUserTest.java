@@ -45,15 +45,21 @@ public class PaymentMultipleUserTest extends BaseTest {
 	}
 
 	@Test(dataProvider = "paymentData", groups = { "multipletestuser" })
-	public void purchaseFlow(String nameFromExcel, String emailFromExcel) {
+	public void purchaseFlow(String nameFromExcel, String emailFromExcel) throws InterruptedException {
 
 		List<String> actualCoffees = coffeesListedd.coffeeNames();
+		
+		Thread.sleep(3000);
+
 
 		List<String> expectedNames = Arrays.asList("Espresso", "Espresso Macchiato", "Cappuccino", "Mocha",
 				"Flat White", "Americano", "Cafe Latte", "Espresso Con Panna", "Cafe Breve");
 
 		List<String> expectedPrices = Arrays.asList("$10.00", "$12.00", "$19.00", "$8.00", "$18.00", "$7.00", "$16.00",
 				"$14.00", "$15.00");
+		
+		Thread.sleep(3000);
+
 
 		Assert.assertEquals(actualCoffees.size(), expectedNames.size());
 
@@ -69,6 +75,7 @@ public class PaymentMultipleUserTest extends BaseTest {
 			Assert.assertTrue(actualData.contains(expectedPrice), "Item #" + i
 					+ " did not contain the expected price. Expected '" + expectedPrice + "' in '" + actualData + "'");
 		}
+		
 
 		beveragess.addingItems();
 
@@ -77,6 +84,9 @@ public class PaymentMultipleUserTest extends BaseTest {
 		String expectedPrice = "Total: $33.00";
 
 		Assert.assertEquals(finalPrice, expectedPrice, "The total cost is incorrect");
+		
+		Thread.sleep(3000);
+
 
 		String proTxt = beveragess.promoText();
 
@@ -85,6 +95,9 @@ public class PaymentMultipleUserTest extends BaseTest {
 		Assert.assertEquals(proTxt, actualProText, "The promotion text does not match");
 
 		String updatedCost = beveragess.acceptPromoOffer();
+		
+		Thread.sleep(3000);
+
 
 		String expectedNewCost = "Total: $37.00";
 
@@ -97,6 +110,9 @@ public class PaymentMultipleUserTest extends BaseTest {
 		Assert.assertEquals(currentPriceDisplayed, currentExpected);
 
 		carts.addAndRemove();
+		
+		Thread.sleep(3000);
+
 
 		String finalPrices = carts.finalTotal();
 
@@ -105,6 +121,9 @@ public class PaymentMultipleUserTest extends BaseTest {
 		Assert.assertEquals(finalPrices, finalExpected);
 
 		carts.finalItems();
+		
+		Thread.sleep(3000);
+
 
 		pays.paymentDetails(nameFromExcel, emailFromExcel);
 
