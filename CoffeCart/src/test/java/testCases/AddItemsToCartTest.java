@@ -2,7 +2,6 @@ package testCases;
 
 import org.testng.annotations.Test;
 
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
@@ -17,14 +16,11 @@ public class AddItemsToCartTest extends BaseTest {
 
 		beverages = new AddItemsToCart(driver);
 	}
-	
 
-	@Test(dependsOnMethods = "testCases.MenuItemsTest.items", groups = {"singleuser"})
+	@Test(dependsOnMethods = "testCases.MenuItemsTest.items", groups = { "singleuser" })
 	public void addingToCart() throws InterruptedException {
 
 		beverages.addingItems();
-		
-		Thread.sleep(3000);
 
 		String finalPrice = beverages.totalCost();
 

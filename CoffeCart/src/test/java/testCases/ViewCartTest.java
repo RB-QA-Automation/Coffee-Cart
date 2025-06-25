@@ -2,7 +2,6 @@ package testCases;
 
 import org.testng.annotations.Test;
 
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
@@ -19,12 +18,9 @@ public class ViewCartTest extends BaseTest {
 
 	}
 
-	@Test(dependsOnMethods = "testCases.AddItemsToCartTest.addingToCart", groups = {"singleuser"})
+	@Test(dependsOnMethods = "testCases.AddItemsToCartTest.addingToCart", groups = { "singleuser" })
 
 	public void updatedCart() throws InterruptedException {
-		
-		Thread.sleep(3000);
-
 
 		String currentPriceDisplayed = cart.currentTotal();
 
@@ -33,9 +29,6 @@ public class ViewCartTest extends BaseTest {
 		Assert.assertEquals(currentPriceDisplayed, currentExpected);
 
 		cart.addAndRemove();
-		
-		Thread.sleep(3000);
-
 
 		String finalPrice = cart.finalTotal();
 
@@ -44,9 +37,6 @@ public class ViewCartTest extends BaseTest {
 		Assert.assertEquals(finalPrice, finalExpected);
 
 		cart.finalItems();
-		
-		Thread.sleep(3000);
-
 
 	}
 

@@ -38,7 +38,7 @@ public class ViewCart extends BasePage {
 	@FindBy(css = "li[class$='list-item'] div:nth-child(1)")
 	List<WebElement> items;
 
-	public String currentTotal()  {
+	public String currentTotal() {
 
 		cartBtn.click();
 		String cartTotal = amount.getText();
@@ -49,7 +49,7 @@ public class ViewCart extends BasePage {
 	}
 
 	public void addAndRemove() {
-		
+
 		addCafeBreve.click();
 		removeMocha.click();
 
@@ -69,9 +69,16 @@ public class ViewCart extends BasePage {
 		for (int i = 0; i < items.size(); i++) {
 
 			String lastOrder = items.get(i).getText();
-			allItemsTxt.append(lastOrder);
-			System.out.println("Final Orders:" + " " + lastOrder);
+
+			if (lastOrder != null && !lastOrder.trim().isEmpty()) {
+
+				allItemsTxt.append(lastOrder);
+				System.out.println("Final Orders:" + " " + lastOrder);
+
+			}
+
 		}
+
 		return allItemsTxt.toString();
 
 	}

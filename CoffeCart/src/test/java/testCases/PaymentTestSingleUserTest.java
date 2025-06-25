@@ -27,14 +27,8 @@ public class PaymentTestSingleUserTest extends BaseTest {
 
 	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = { "singleuser" })
 	public void purchaseFlow() throws InterruptedException {
-		
-		Thread.sleep(3000);
-
 
 		pay.paymentDetails();
-		
-		Thread.sleep(3000);
-
 
 		String actualMsg = pay.paymentMsg();
 

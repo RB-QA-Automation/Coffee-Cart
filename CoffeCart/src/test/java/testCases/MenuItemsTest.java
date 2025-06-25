@@ -26,14 +26,8 @@ public class MenuItemsTest extends BaseTest {
 		// There is a data mismatch for the prices, had to update prices in the script
 		// manually
 		// in order to pass test
-		
-		Thread.sleep(3000);
-
 
 		List<String> actualCoffees = coffeesListed.coffeeNames();
-		
-		Thread.sleep(3000);
-
 
 		List<String> expectedCoffeeData = Arrays.asList("Espresso $10.00", "Espresso Macchiato $12.00",
 				"Cappuccino $19.00", "Mocha $8.00", "Flat White $18.00", "Americano $7.00", "Cafe Latte $16.00",
