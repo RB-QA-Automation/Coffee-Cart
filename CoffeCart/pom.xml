@@ -82,22 +82,6 @@
         </build>
     </profile>
 
-    <profile>
-        <id>multi-user</id>
-        <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <configuration>
-                        <suiteXmlFiles>
-                             <suiteXmlFile>Test Runs/multiuser.xml</suiteXmlFile>
-                        </suiteXmlFiles>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </build>
-    </profile>
   </profiles>
 
 </project>
