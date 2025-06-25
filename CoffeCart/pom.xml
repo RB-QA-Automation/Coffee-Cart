@@ -83,7 +83,7 @@
     </profile>
     
      <profile>
-        <id>single-user</id>
+        <id>multi-user</id>
         <build>
             <plugins>
                 <plugin>
