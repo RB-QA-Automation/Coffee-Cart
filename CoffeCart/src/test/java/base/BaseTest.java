@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 
 	public static WebDriver driver;
@@ -20,6 +22,7 @@ public class BaseTest {
 	@BeforeTest(alwaysRun = true)
 	public void launch() {
 
+		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		
 		log.info("Launching the browser");

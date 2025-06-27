@@ -2,60 +2,60 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-27T17:42:00 BST" name="CoffeCart" finished-at="2025-06-27T17:42:06 BST" duration-ms="5227">
+  <suite started-at="2025-06-27T17:48:19 BST" name="CoffeCart" finished-at="2025-06-27T17:48:25 BST" duration-ms="5352">
     <groups>
       <group name="singleuser">
-        <method signature="MenuItemsTest.items()[pri:0, instance:testCases.MenuItemsTest@43ed0ff3]" name="items" class="testCases.MenuItemsTest"/>
-        <method signature="AddItemsToCartTest.addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@4da855dd]" name="addingToCart" class="testCases.AddItemsToCartTest"/>
-        <method signature="ViewCartTest.updatedCart()[pri:0, instance:testCases.ViewCartTest@6691490c]" name="updatedCart" class="testCases.ViewCartTest"/>
-        <method signature="PaymentTestSingleUserTest.purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@2187fff7]" name="purchaseFlow" class="testCases.PaymentTestSingleUserTest"/>
+        <method signature="MenuItemsTest.items()[pri:0, instance:testCases.MenuItemsTest@e6516e]" name="items" class="testCases.MenuItemsTest"/>
+        <method signature="AddItemsToCartTest.addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@388ffbc2]" name="addingToCart" class="testCases.AddItemsToCartTest"/>
+        <method signature="ViewCartTest.updatedCart()[pri:0, instance:testCases.ViewCartTest@a50b09c]" name="updatedCart" class="testCases.ViewCartTest"/>
+        <method signature="PaymentTestSingleUserTest.purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@4da855dd]" name="purchaseFlow" class="testCases.PaymentTestSingleUserTest"/>
       </group> <!-- singleuser -->
     </groups>
-    <test started-at="2025-06-27T17:42:00 BST" name="SingleUserPurchaseTest" finished-at="2025-06-27T17:42:06 BST" duration-ms="5227">
+    <test started-at="2025-06-27T17:48:19 BST" name="SingleUserPurchaseTest" finished-at="2025-06-27T17:48:25 BST" duration-ms="5352">
       <class name="testCases.PaymentTestSingleUserTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTestSingleUserTest@2187fff7]" started-at="2025-06-27T17:42:02 BST" name="pageSetup" finished-at="2025-06-27T17:42:02 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTestSingleUserTest@4da855dd]" started-at="2025-06-27T17:48:21 BST" name="pageSetup" finished-at="2025-06-27T17:48:21 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@2187fff7]" started-at="2025-06-27T17:42:02 BST" name="purchaseFlow" finished-at="2025-06-27T17:42:02 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="661" status="PASS">
+        <test-method signature="purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@4da855dd]" started-at="2025-06-27T17:48:21 BST" name="purchaseFlow" finished-at="2025-06-27T17:48:22 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- purchaseFlow -->
       </class> <!-- testCases.PaymentTestSingleUserTest -->
       <class name="testCases.AddItemsToCartTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.AddItemsToCartTest@4da855dd]" started-at="2025-06-27T17:42:02 BST" name="pageSetup" finished-at="2025-06-27T17:42:02 BST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.AddItemsToCartTest@388ffbc2]" started-at="2025-06-27T17:48:21 BST" name="pageSetup" finished-at="2025-06-27T17:48:21 BST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@4da855dd]" started-at="2025-06-27T17:42:02 BST" name="addingToCart" finished-at="2025-06-27T17:42:02 BST" depends-on-methods="testCases.MenuItemsTest.items" duration-ms="128" status="PASS">
+        <test-method signature="addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@388ffbc2]" started-at="2025-06-27T17:48:21 BST" name="addingToCart" finished-at="2025-06-27T17:48:21 BST" depends-on-methods="testCases.MenuItemsTest.items" duration-ms="129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addingToCart -->
       </class> <!-- testCases.AddItemsToCartTest -->
       <class name="testCases.MenuItemsTest">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.MenuItemsTest@43ed0ff3]" started-at="2025-06-27T17:42:00 BST" name="launch" finished-at="2025-06-27T17:42:01 BST" duration-ms="1150" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.MenuItemsTest@e6516e]" started-at="2025-06-27T17:48:19 BST" name="launch" finished-at="2025-06-27T17:48:21 BST" duration-ms="1250" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.MenuItemsTest@43ed0ff3]" started-at="2025-06-27T17:42:01 BST" name="pageSetup" finished-at="2025-06-27T17:42:01 BST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.MenuItemsTest@e6516e]" started-at="2025-06-27T17:48:21 BST" name="pageSetup" finished-at="2025-06-27T17:48:21 BST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="items()[pri:0, instance:testCases.MenuItemsTest@43ed0ff3]" started-at="2025-06-27T17:42:01 BST" name="items" finished-at="2025-06-27T17:42:02 BST" duration-ms="41" status="PASS">
+        <test-method signature="items()[pri:0, instance:testCases.MenuItemsTest@e6516e]" started-at="2025-06-27T17:48:21 BST" name="items" finished-at="2025-06-27T17:48:21 BST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- items -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testCases.MenuItemsTest@43ed0ff3]" started-at="2025-06-27T17:42:02 BST" name="close" finished-at="2025-06-27T17:42:06 BST" duration-ms="3093" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:testCases.MenuItemsTest@e6516e]" started-at="2025-06-27T17:48:22 BST" name="close" finished-at="2025-06-27T17:48:25 BST" duration-ms="3097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- testCases.MenuItemsTest -->
       <class name="testCases.ViewCartTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.ViewCartTest@6691490c]" started-at="2025-06-27T17:42:02 BST" name="pageSetup" finished-at="2025-06-27T17:42:02 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.ViewCartTest@a50b09c]" started-at="2025-06-27T17:48:21 BST" name="pageSetup" finished-at="2025-06-27T17:48:21 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="updatedCart()[pri:0, instance:testCases.ViewCartTest@6691490c]" started-at="2025-06-27T17:42:02 BST" name="updatedCart" finished-at="2025-06-27T17:42:02 BST" depends-on-methods="testCases.AddItemsToCartTest.addingToCart" duration-ms="127" status="PASS">
+        <test-method signature="updatedCart()[pri:0, instance:testCases.ViewCartTest@a50b09c]" started-at="2025-06-27T17:48:21 BST" name="updatedCart" finished-at="2025-06-27T17:48:21 BST" depends-on-methods="testCases.AddItemsToCartTest.addingToCart" duration-ms="131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updatedCart -->
