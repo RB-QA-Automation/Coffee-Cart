@@ -1,6 +1,9 @@
 package pom;
 
 import org.openqa.selenium.WebDriver;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import base.BasePage;
 
 public class AddItemsToCart extends BasePage {
+
+	private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
 
 	public AddItemsToCart(WebDriver driver) {
 
@@ -51,7 +56,7 @@ public class AddItemsToCart extends BasePage {
 
 		wait.until(ExpectedConditions.visibilityOf(cost));
 		String amount = cost.getText();
-		System.out.println("Cost of Beverages Added To Basket:" + " " + amount);
+		log.info("Cost of Beverages Added To Basket:" + " " + amount);
 		System.out.println("--------------------------------------------------");
 		return amount;
 
@@ -70,7 +75,7 @@ public class AddItemsToCart extends BasePage {
 		wait.until(ExpectedConditions.visibilityOf(yes));
 		yes.click();
 		String newAmount = cost.getText();
-		System.out.println("New cost of Beverages after adding promo offer:" + " " + newAmount);
+		log.info("New cost of Beverages after adding promo offer:" + " " + newAmount);
 		System.out.println("--------------------------------------------------");
 		return newAmount;
 

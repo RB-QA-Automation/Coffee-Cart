@@ -1,5 +1,7 @@
 package Utilities;
 
+import java.io.File;
+
 import com.aventstack.extentreports.ExtentReports;
 
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -14,6 +16,13 @@ public class ExtentReportsManager {
 		if (extent == null) {
 
 			String reportPath = "target/extent-reports/ExtentReport.html";
+			
+			File reportDir = new File("target/extent-reports");
+			if (!reportDir.exists()) {
+				
+				reportDir.mkdirs();
+			}
+			
 			ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
 			sparkReporter.config().setDocumentTitle("Java Selenium Automation Framework");

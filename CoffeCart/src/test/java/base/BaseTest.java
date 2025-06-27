@@ -2,6 +2,8 @@ package base;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,11 +15,14 @@ public class BaseTest {
 
 	public static WebDriver driver;
 	public static WebDriverWait wait;
+	public static Logger log = LogManager.getLogger(BaseTest.class.getName());
 
 	@BeforeTest(alwaysRun = true)
 	public void launch() {
 
 		ChromeOptions options = new ChromeOptions();
+		
+		log.info("Launching the browser");
 
 		// options.addArguments("--headless");
 		options.addArguments("--disable-gpu");
@@ -39,6 +44,8 @@ public class BaseTest {
 
 	@AfterTest(alwaysRun = true)
 	public void close() throws InterruptedException {
+		
+		log.info("Closing the browser");
 
 		if (driver != null) {
 

@@ -2,6 +2,9 @@ package pom;
 
 import org.openqa.selenium.WebDriver;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,6 +13,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import base.BasePage;
 
 public class PaymentMultipleUser extends BasePage {
+	
+	
+    private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
+
+	
 
 	public PaymentMultipleUser(WebDriver driver) {
 
@@ -50,7 +58,7 @@ public class PaymentMultipleUser extends BasePage {
 
 		wait.until(ExpectedConditions.visibilityOf(confirmMsg));
 		String txt = confirmMsg.getText();
-		System.out.println("Purchase Confirmation Message: " + " " + txt);
+		log.info("Purchase Confirmation Message: " + " " + txt);
 		return txt;
 
 	}

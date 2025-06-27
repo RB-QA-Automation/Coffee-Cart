@@ -2,8 +2,11 @@ package pom;
 
 import java.util.ArrayList;
 
+
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +14,8 @@ import org.openqa.selenium.support.PageFactory;
 import base.BasePage;
 
 public class MenuItems extends BasePage {
+	
+	private static final Logger log = LogManager.getLogger(MenuItems.class.getName());
 
 	public MenuItems(WebDriver driver) {
 
@@ -32,7 +37,7 @@ public class MenuItems extends BasePage {
 
 			names.add(itemsList);
 
-			System.out.println("Coffee Menu: " + " " + itemsList);
+			log.info("Coffee Menu: " + " " + itemsList);
 			System.out.println("--------------------------------------------------");
 
 		}

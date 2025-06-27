@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,6 +16,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import base.BasePage;
 
 public class ViewCart extends BasePage {
+	
+    private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
+
+	
+	
 
 	public ViewCart(WebDriver driver) {
 
@@ -42,7 +50,7 @@ public class ViewCart extends BasePage {
 
 		cartBtn.click();
 		String cartTotal = amount.getText();
-		System.out.println("Current total cost in cart is:" + " " + cartTotal);
+		log.info("Current total cost in cart is:" + " " + cartTotal);
 		System.out.println("--------------------------------------------------");
 		return cartTotal;
 
@@ -58,7 +66,7 @@ public class ViewCart extends BasePage {
 	public String finalTotal() {
 
 		String finalCost = amount.getText();
-		System.out.println("Final total cost is:" + " " + finalCost);
+		log.info("Final total cost is:" + " " + finalCost);
 		System.out.println("--------------------------------------------------");
 		return finalCost;
 
@@ -73,7 +81,7 @@ public class ViewCart extends BasePage {
 			if (lastOrder != null && !lastOrder.trim().isEmpty()) {
 
 				allItemsTxt.append(lastOrder);
-				System.out.println("Final Orders:" + " " + lastOrder);
+				log.info("Final Orders:" + " " + lastOrder);
 
 			}
 
