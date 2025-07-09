@@ -11,6 +11,14 @@
       </run>
     </groups>
     <classes>
+      <class name="testCases.PaymentTestSingleUserTest">
+        <methods>
+          <include name="pageSetup"/>
+          <include name="purchaseFlow"/>
+          <include name="launch"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- testCases.PaymentTestSingleUserTest -->
       <class name="testCases.ViewCartTest">
         <methods>
           <include name="launch"/>
@@ -21,8 +29,8 @@
       </class> <!-- testCases.ViewCartTest -->
       <class name="testCases.AddItemsToCartTest">
         <methods>
-          <include name="pageSetup"/>
           <include name="addingToCart"/>
+          <include name="pageSetup"/>
           <include name="launch"/>
           <include name="close"/>
         </methods>
