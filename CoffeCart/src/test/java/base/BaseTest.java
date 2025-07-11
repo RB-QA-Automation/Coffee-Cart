@@ -17,7 +17,7 @@ public class BaseTest {
 
 	public static WebDriver driver;
 	public static WebDriverWait wait;
-	public static Logger log = LogManager.getLogger(BaseTest.class.getName());
+	private static Logger log = LogManager.getLogger(BaseTest.class.getName());
 
 	@BeforeTest(alwaysRun = true)
 	public void launch() {

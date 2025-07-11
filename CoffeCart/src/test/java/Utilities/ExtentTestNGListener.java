@@ -1,5 +1,7 @@
 package Utilities;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 
 import org.openqa.selenium.TakesScreenshot;
@@ -12,24 +14,27 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import base.BaseTest;
+import testCases.AddItemsToCartTest;
 
 public class ExtentTestNGListener implements ITestListener {
 
 	private static final ExtentReports extent = ExtentReportsManager.createInstance();
 
 	private static final ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+	
+	private static final Logger log = LogManager.getLogger(AddItemsToCartTest.class.getName());
+
 
 	@Override
 	public void onStart(ITestContext contentx) {
 
-		System.out.println("Test Suite started!");
-		System.out.println("--------------------------------------------------");
+		log.info("Test Suite started!");
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
 
-		System.out.println("Test Suite is ending!");
+		log.info("Test Suite is ending!");
 		extent.flush();
 
 	}

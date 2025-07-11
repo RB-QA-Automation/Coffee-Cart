@@ -2,16 +2,36 @@
 <Configuration status="WARN">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <!-- 
+              This is a clean, simple pattern with custom colors and alignment.
+              - %d{HH:mm:ss.SSS} -> Time
+              - %highlight{...}  -> Adds custom ANSI colors for each log level.
+              - %l               -> Outputs the full location info (class.method(file:line)) which IDEs can parse.
+              - %n%n             -> Adds a double newline for extra spacing.
+            -->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %highlight{[%-5level]}{FATAL=red, ERROR=red, WARN=magenta, INFO=cyan, DEBUG=yellow, TRACE=white} %l - %msg%n%n%throwable"/>
         </Console>
-        <File name="File" fileName="target/logs/app.log">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
     </Appenders>
+
     <Loggers>
+        <!-- Silence SLF4J warnings about providers and bindings -->
+        <Logger name="org.slf4j" level="error" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        
+        <!-- Silence the noisy CDP version mismatch warning -->
+        <Logger name="org.openqa.selenium.devtools.CdpVersionFinder" level="error" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <!-- General Selenium logger remains at "warn" -->
+        <Logger name="org.openqa.selenium" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <!-- Root Logger: Default for all classes in your project -->
         <Root level="debug">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="File"/>
         </Root>
     </Loggers>
 </Configuration>

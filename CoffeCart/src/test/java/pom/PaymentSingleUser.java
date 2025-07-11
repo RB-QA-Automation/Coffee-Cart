@@ -14,7 +14,7 @@ import base.BasePage;
 
 public class PaymentSingleUser extends BasePage {
 	
-    private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
+    private static final Logger log = LogManager.getLogger(PaymentSingleUser.class.getName());
 
 
 	public PaymentSingleUser(WebDriver driver) {
@@ -65,9 +65,7 @@ public class PaymentSingleUser extends BasePage {
 
 		wait.until(ExpectedConditions.visibilityOf(confirmMsg));
 		String txt = confirmMsg.getText();
-		System.out.println("--------------------------------------------------");
 		log.info("Purchase Confirmation Message: " + " " + txt);
-		System.out.println("--------------------------------------------------");
 		return txt;
 
 	}

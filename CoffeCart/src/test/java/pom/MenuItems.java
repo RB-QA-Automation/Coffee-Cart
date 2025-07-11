@@ -38,7 +38,6 @@ public class MenuItems extends BasePage {
 			names.add(itemsList);
 
 			log.info("Coffee Menu: " + " " + itemsList);
-			System.out.println("--------------------------------------------------");
 
 		}
 

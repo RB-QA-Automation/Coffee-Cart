@@ -15,7 +15,7 @@ import base.BasePage;
 public class PaymentMultipleUser extends BasePage {
 	
 	
-    private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
+    private static final Logger log = LogManager.getLogger(PaymentMultipleUser.class.getName());
 
 	
 

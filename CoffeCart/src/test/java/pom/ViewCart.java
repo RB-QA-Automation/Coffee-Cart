@@ -2,6 +2,7 @@ package pom;
 
 import java.util.List;
 
+
 import org.openqa.selenium.WebDriver;
 
 import org.apache.logging.log4j.LogManager;
@@ -17,7 +18,7 @@ import base.BasePage;
 
 public class ViewCart extends BasePage {
 
-	private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
+	private static final Logger log = LogManager.getLogger(ViewCart.class.getName());
 
 	public ViewCart(WebDriver driver) {
 
@@ -50,7 +51,6 @@ public class ViewCart extends BasePage {
 		
 		String cartTotal = amount.getText();
 		log.info("Current total cost in cart is:" + " " + cartTotal);
-		System.out.println("--------------------------------------------------");
 		return cartTotal;
 
 	}
@@ -69,7 +69,6 @@ public class ViewCart extends BasePage {
 
 		String finalCost = amount.getText();
 		log.info("Final total cost is:" + " " + finalCost);
-		System.out.println("--------------------------------------------------");
 		return finalCost;
 
 	}

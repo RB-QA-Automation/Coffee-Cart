@@ -5,12 +5,16 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
 import pom.MenuItems;
 
 public class MenuItemsTest extends BaseTest {
+
+	private static final Logger log = LogManager.getLogger(MenuItemsTest.class.getName());
 
 	MenuItems coffeesListed;
 
@@ -35,7 +39,6 @@ public class MenuItemsTest extends BaseTest {
 				"Cappuccino $19.00", "Mocha $8.00", "Flat White $18.00", "Americano $7.00", "Cafe Latte $16.00",
 				"Espresso Con Panna $14.00", "Cafe Breve $15.00");
 
-
 		if (actualCoffees.size() != expectedCoffeeData.size()) {
 
 			log.error("Total number of coffees is incorrect. Expected: " + expectedCoffeeData.size() + "But got: "
@@ -44,7 +47,6 @@ public class MenuItemsTest extends BaseTest {
 
 		Assert.assertEquals(actualCoffees.size(), expectedCoffeeData.size(),
 				"The number of actual coffees do not match the expected amount");
-
 
 		for (int i = 0; i < expectedCoffeeData.size(); i++) {
 

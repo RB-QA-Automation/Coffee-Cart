@@ -62,7 +62,6 @@ public class AddItemsToCart extends BasePage {
 		wait.until(ExpectedConditions.visibilityOf(cost));
 		String amount = cost.getText();
 		log.info("Cost of Beverages Added To Basket:" + " " + amount);
-		System.out.println("--------------------------------------------------");
 		return amount;
 
 	}
@@ -82,7 +81,6 @@ public class AddItemsToCart extends BasePage {
 		yes.click();
 		String newAmount = cost.getText();
 		log.info("New cost of Beverages after adding promo offer:" + " " + newAmount);
-		System.out.println("--------------------------------------------------");
 		return newAmount;
 
 	}
