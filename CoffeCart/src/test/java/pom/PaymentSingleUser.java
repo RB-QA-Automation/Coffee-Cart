@@ -44,10 +44,19 @@ public class PaymentSingleUser extends BasePage {
 
 	public void paymentDetails() {
 
+		log.debug("Clicking on purchase button");
 		purchaseBtn.click();
+		
+		log.debug("Entering first and last name into field");
 		name.sendKeys("Raja Bhamra");
+		
+		log.debug("Entering email addresss");
 		email.sendKeys("raja@gmail.com");
+		
+		log.debug("Clicking on check box");
 		checkBox.click();
+		
+		log.debug("Clicking on submit button");
 		submitBtn.click();
 
 	}

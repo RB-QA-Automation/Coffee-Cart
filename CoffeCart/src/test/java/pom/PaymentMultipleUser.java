@@ -46,10 +46,19 @@ public class PaymentMultipleUser extends BasePage {
 
 	public void paymentDetails(String excelName, String excelEmail) {
 
+		log.debug("Clicking on purchase button");		
 		purchaseBtn.click();
+		
+		log.debug("Entering name in field");
 		name.sendKeys(excelName);
+		
+		log.debug("Entering email in field");
 		email.sendKeys(excelEmail);
+		
+		log.debug("Ticking checkbox");
 		checkBox.click();
+		
+		log.debug("Clicking on submit button");
 		submitBtn.click();
 
 	}

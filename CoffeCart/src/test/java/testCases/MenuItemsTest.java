@@ -35,7 +35,6 @@ public class MenuItemsTest extends BaseTest {
 				"Cappuccino $19.00", "Mocha $8.00", "Flat White $18.00", "Americano $7.00", "Cafe Latte $16.00",
 				"Espresso Con Panna $14.00", "Cafe Breve $15.00");
 
-		log.info("Confirming the number of coffees listed");
 
 		if (actualCoffees.size() != expectedCoffeeData.size()) {
 
@@ -46,7 +45,6 @@ public class MenuItemsTest extends BaseTest {
 		Assert.assertEquals(actualCoffees.size(), expectedCoffeeData.size(),
 				"The number of actual coffees do not match the expected amount");
 
-		log.info("Confirming each coffee item and its price");
 
 		for (int i = 0; i < expectedCoffeeData.size(); i++) {
 

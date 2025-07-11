@@ -45,6 +45,7 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 	@Test(dataProvider = "paymentData", groups = { "multipletestuser" })
 	public void purchaseFlow(String nameFromExcel, String emailFromExcel) throws InterruptedException {
+		
 
 		List<String> actualCoffees = coffeesListedd.coffeeNames();
 

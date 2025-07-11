@@ -28,11 +28,20 @@ public class PaymentTestSingleUserTest extends BaseTest {
 	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = { "singleuser" })
 	public void purchaseFlow() throws InterruptedException {
 
+		log.info("Purchase flow test with single user");
+
 		pay.paymentDetails();
 
 		String actualMsg = pay.paymentMsg();
 
 		String expectedMsg = "Thanks for your purchase. Please check your email for payment.";
+
+		if(!actualMsg.equals(expectedMsg)) {
+
+			log.error(
+					"Purchase confirmation text does not match. Expected: " + expectedMsg + "But found: " + actualMsg);
+
+		}
 
 		Assert.assertEquals(actualMsg, expectedMsg);
 

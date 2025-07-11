@@ -16,11 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import base.BasePage;
 
 public class ViewCart extends BasePage {
-	
-    private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
 
-	
-	
+	private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
 
 	public ViewCart(WebDriver driver) {
 
@@ -48,7 +45,9 @@ public class ViewCart extends BasePage {
 
 	public String currentTotal() {
 
+		log.debug("Clicking on cart button");
 		cartBtn.click();
+		
 		String cartTotal = amount.getText();
 		log.info("Current total cost in cart is:" + " " + cartTotal);
 		System.out.println("--------------------------------------------------");
@@ -58,7 +57,10 @@ public class ViewCart extends BasePage {
 
 	public void addAndRemove() {
 
+	    log.debug("Adding a Cafe Breve to basket");
 		addCafeBreve.click();
+		
+		log.debug("Removing Mocha from basket");
 		removeMocha.click();
 
 	}
