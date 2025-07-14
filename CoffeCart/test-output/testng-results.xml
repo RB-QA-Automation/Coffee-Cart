@@ -1,61 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-14T18:19:22 BST" name="CoffeCart" finished-at="2025-07-14T18:19:28 BST" duration-ms="5345">
+  <suite started-at="2025-07-14T18:46:41 BST" name="CoffeCart" finished-at="2025-07-14T18:46:47 BST" duration-ms="6248">
     <groups>
       <group name="singleuser">
-        <method signature="MenuItemsTest.items()[pri:0, instance:testCases.MenuItemsTest@2e5c7f0b]" name="items" class="testCases.MenuItemsTest"/>
-        <method signature="AddItemsToCartTest.addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@538613b3]" name="addingToCart" class="testCases.AddItemsToCartTest"/>
-        <method signature="ViewCartTest.updatedCart()[pri:0, instance:testCases.ViewCartTest@1eef9aef]" name="updatedCart" class="testCases.ViewCartTest"/>
-        <method signature="PaymentTestSingleUserTest.purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@11389053]" name="purchaseFlow" class="testCases.PaymentTestSingleUserTest"/>
+        <method signature="MenuItemsTest.items()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" name="items" class="testCases.MenuItemsTest"/>
+        <method signature="AddItemsToCartTest.addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@302fec27]" name="addingToCart" class="testCases.AddItemsToCartTest"/>
+        <method signature="ViewCartTest.updatedCart()[pri:0, instance:testCases.ViewCartTest@770d0ea6]" name="updatedCart" class="testCases.ViewCartTest"/>
+        <method signature="PaymentTestSingleUserTest.purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@48c40605]" name="purchaseFlow" class="testCases.PaymentTestSingleUserTest"/>
       </group> <!-- singleuser -->
     </groups>
-    <test started-at="2025-07-14T18:19:22 BST" name="SingleUserPurchaseTest" finished-at="2025-07-14T18:19:28 BST" duration-ms="5345">
+    <test started-at="2025-07-14T18:46:41 BST" name="SingleUserPurchaseTest" finished-at="2025-07-14T18:46:47 BST" duration-ms="6248">
       <class name="testCases.PaymentTestSingleUserTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTestSingleUserTest@11389053]" started-at="2025-07-14T18:19:24 BST" name="pageSetup" finished-at="2025-07-14T18:19:24 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTestSingleUserTest@48c40605]" started-at="2025-07-14T18:46:43 BST" name="pageSetup" finished-at="2025-07-14T18:46:43 BST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@11389053]" started-at="2025-07-14T18:19:24 BST" name="purchaseFlow" finished-at="2025-07-14T18:19:24 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="664" status="PASS">
+        <test-method signature="purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@48c40605]" started-at="2025-07-14T18:46:43 BST" name="purchaseFlow" finished-at="2025-07-14T18:46:44 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="1077" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (719, 84). Other element would receive the click: <div data-v-29c3be1b="" data-v-a68519c8="" class="modal" style="">...</div>
+  (Session info: chrome=138.0.7204.101)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bcff6a92c79ccf8b0a8903de6a3a311b, clickElement {id=f.0F19AE1C2F16C8BC8B9E7DC0F3797912.d.6C6220A3455CC25024F9739F70A5D9CE.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53933}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53933/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (bcff6a92c79ccf8b0a8903de6a3a311b)] -> css selector: button[aria-label='Proceed to checkout']]
+Session ID: bcff6a92c79ccf8b0a8903de6a3a311b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button data-v-a68519c8="" data-test="checkout" class="pay" type="button" aria-label="Proceed to checkout">...</button> is not clickable at point (719, 84). Other element would receive the click: <div data-v-29c3be1b="" data-v-a68519c8="" class="modal" style="">...</div>
+  (Session info: chrome=138.0.7204.101)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bcff6a92c79ccf8b0a8903de6a3a311b, clickElement {id=f.0F19AE1C2F16C8BC8B9E7DC0F3797912.d.6C6220A3455CC25024F9739F70A5D9CE.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53933}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53933/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (bcff6a92c79ccf8b0a8903de6a3a311b)] -> css selector: button[aria-label='Proceed to checkout']]
+Session ID: bcff6a92c79ccf8b0a8903de6a3a311b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy30.click(Unknown Source)
+at pom.PaymentSingleUser.paymentDetails(PaymentSingleUser.java:49)
+at testCases.PaymentTestSingleUserTest.purchaseFlow(PaymentTestSingleUserTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- purchaseFlow -->
       </class> <!-- testCases.PaymentTestSingleUserTest -->
       <class name="testCases.AddItemsToCartTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.AddItemsToCartTest@538613b3]" started-at="2025-07-14T18:19:24 BST" name="pageSetup" finished-at="2025-07-14T18:19:24 BST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.AddItemsToCartTest@302fec27]" started-at="2025-07-14T18:46:42 BST" name="pageSetup" finished-at="2025-07-14T18:46:42 BST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@538613b3]" started-at="2025-07-14T18:19:24 BST" name="addingToCart" finished-at="2025-07-14T18:19:24 BST" depends-on-methods="testCases.MenuItemsTest.items" duration-ms="125" status="PASS">
+        <test-method signature="addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@302fec27]" started-at="2025-07-14T18:46:42 BST" name="addingToCart" finished-at="2025-07-14T18:46:43 BST" depends-on-methods="testCases.MenuItemsTest.items" duration-ms="183" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The total cost is incorrect expected [Total: $33.00] but found [Total: $66.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The total cost is incorrect expected [Total: $33.00] but found [Total: $66.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testCases.AddItemsToCartTest.addingToCart(AddItemsToCartTest.java:41)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addingToCart -->
       </class> <!-- testCases.AddItemsToCartTest -->
       <class name="testCases.MenuItemsTest">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.MenuItemsTest@2e5c7f0b]" started-at="2025-07-14T18:19:22 BST" name="launch" finished-at="2025-07-14T18:19:23 BST" duration-ms="1270" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-14T18:46:41 BST" name="launch" finished-at="2025-07-14T18:46:42 BST" duration-ms="1195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.MenuItemsTest@2e5c7f0b]" started-at="2025-07-14T18:19:23 BST" name="pageSetup" finished-at="2025-07-14T18:19:23 BST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-14T18:46:42 BST" name="pageSetup" finished-at="2025-07-14T18:46:42 BST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="items()[pri:0, instance:testCases.MenuItemsTest@2e5c7f0b]" started-at="2025-07-14T18:19:23 BST" name="items" finished-at="2025-07-14T18:19:24 BST" duration-ms="37" status="PASS">
+        <test-method signature="items()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-14T18:46:42 BST" name="items" finished-at="2025-07-14T18:46:42 BST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- items -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testCases.MenuItemsTest@2e5c7f0b]" started-at="2025-07-14T18:19:24 BST" name="close" finished-at="2025-07-14T18:19:28 BST" duration-ms="3096" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-14T18:46:44 BST" name="close" finished-at="2025-07-14T18:46:47 BST" duration-ms="3088" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- testCases.MenuItemsTest -->
       <class name="testCases.ViewCartTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.ViewCartTest@1eef9aef]" started-at="2025-07-14T18:19:24 BST" name="pageSetup" finished-at="2025-07-14T18:19:24 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.ViewCartTest@770d0ea6]" started-at="2025-07-14T18:46:43 BST" name="pageSetup" finished-at="2025-07-14T18:46:43 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="updatedCart()[pri:0, instance:testCases.ViewCartTest@1eef9aef]" started-at="2025-07-14T18:19:24 BST" name="updatedCart" finished-at="2025-07-14T18:19:24 BST" depends-on-methods="testCases.AddItemsToCartTest.addingToCart" duration-ms="127" status="PASS">
+        <test-method signature="updatedCart()[pri:0, instance:testCases.ViewCartTest@770d0ea6]" started-at="2025-07-14T18:46:43 BST" name="updatedCart" finished-at="2025-07-14T18:46:43 BST" depends-on-methods="testCases.AddItemsToCartTest.addingToCart" duration-ms="62" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Total: $37.00] but found [Total: $66.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Total: $37.00] but found [Total: $66.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testCases.ViewCartTest.updatedCart(ViewCartTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updatedCart -->

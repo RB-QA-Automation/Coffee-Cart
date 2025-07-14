@@ -46,12 +46,15 @@ public class AddItemsToCart extends BasePage {
 
 	public void addingItems() {
 
+		clickElement(espresso);
 		log.debug("Clicking on Espresso");
 		espresso.click();
 
+		clickElement(mocha);
 		log.debug("Clicking on Mocha");
 		mocha.click();
 
+		clickElement(cafeBreve);
 		log.debug("Clicking on Cafe Breve");
 		cafeBreve.click();
 

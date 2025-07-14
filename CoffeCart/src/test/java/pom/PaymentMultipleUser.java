@@ -43,6 +43,7 @@ public class PaymentMultipleUser extends BasePage {
 
 	public void paymentDetails(String excelName, String excelEmail) {
 
+		clickElement(purchaseBtn);
 		log.debug("Clicking on purchase button");
 		purchaseBtn.click();
 
@@ -52,9 +53,11 @@ public class PaymentMultipleUser extends BasePage {
 		log.debug("Entering email in field");
 		email.sendKeys(excelEmail);
 
+		clickElement(checkBox);
 		log.debug("Ticking checkbox");
 		checkBox.click();
 
+		clickElement(submitBtn);
 		log.debug("Clicking on submit button");
 		submitBtn.click();
 

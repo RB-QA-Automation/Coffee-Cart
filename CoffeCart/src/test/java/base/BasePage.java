@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Alert; // Import the Alert class
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,7 +25,15 @@ public class BasePage {
 	protected void clickElement(WebElement element) {
 
 		this.wait.until(ExpectedConditions.elementToBeClickable(element));
-		element.click();
+		try {
+
+			element.click();
+
+		} catch (ElementClickInterceptedException e) {
+
+			System.out.println("Element was not clickable");
+
+		}
 
 	}
 

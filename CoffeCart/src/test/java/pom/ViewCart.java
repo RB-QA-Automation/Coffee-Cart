@@ -46,6 +46,7 @@ public class ViewCart extends BasePage {
 
 	public String currentTotal() {
 
+		clickElement(cartBtn);
 		log.debug("Clicking on cart button");
 		cartBtn.click();
 		
@@ -57,9 +58,11 @@ public class ViewCart extends BasePage {
 
 	public void addAndRemove() {
 
+		clickElement(addCafeBreve);
 	    log.debug("Adding a Cafe Breve to basket");
 		addCafeBreve.click();
 		
+		clickElement(removeMocha);
 		log.debug("Removing Mocha from basket");
 		removeMocha.click();
 

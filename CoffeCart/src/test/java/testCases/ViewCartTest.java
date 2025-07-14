@@ -33,7 +33,7 @@ public class ViewCartTest extends BaseTest {
 
 		if (!currentPriceDisplayed.equals(currentExpected)) {
 
-			log.error("Price displayed is incorrect. Expected: " + currentExpected + "But found: "
+			log.error("Price displayed is incorrect. Expected: " + currentExpected + " But found: "
 					+ currentPriceDisplayed);
 		}
 

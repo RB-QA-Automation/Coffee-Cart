@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CoffeCart" class="navigator-link">
-              <span class="suite-name border-passed">CoffeCart</span>
+              <span class="suite-name border-failed">CoffeCart</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CoffeCart" class="hide-methods failed suite-CoffeCart"> (hide)</a> <!-- hide-methods failed suite-CoffeCart -->
+                      <a href="#" panel-name="suite-CoffeCart" class="show-methods failed suite-CoffeCart"> (show)</a> <!-- show-methods failed suite-CoffeCart -->
+                    </span>
+                    <div class="method-list-content failed suite-CoffeCart">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CoffeCart" title="testCases.AddItemsToCartTest" class="method navigator-link" hash-for-method="addingToCart">addingToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CoffeCart" title="testCases.PaymentTestSingleUserTest" class="method navigator-link" hash-for-method="purchaseFlow">purchaseFlow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CoffeCart" title="testCases.ViewCartTest" class="method navigator-link" hash-for-method="updatedCart">updatedCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-CoffeCart -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +127,7 @@
                     <div class="method-list-content passed suite-CoffeCart">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CoffeCart" title="testCases.AddItemsToCartTest" class="method navigator-link" hash-for-method="addingToCart">addingToCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-CoffeCart" title="testCases.MenuItemsTest" class="method navigator-link" hash-for-method="items">items</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CoffeCart" title="testCases.PaymentTestSingleUserTest" class="method navigator-link" hash-for-method="purchaseFlow">purchaseFlow</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CoffeCart" title="testCases.ViewCartTest" class="method navigator-link" hash-for-method="updatedCart">updatedCart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-CoffeCart -->
@@ -133,6 +142,86 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CoffeCart" class="panel CoffeCart">
+          <div class="suite-CoffeCart-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.PaymentTestSingleUserTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="purchaseFlow">
+                  </a> <!-- purchaseFlow -->
+                  <span class="method-name">purchaseFlow</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-a68519c8=&quot;&quot; data-test=&quot;checkout&quot; class=&quot;pay&quot; type=&quot;button&quot; aria-label=&quot;Proceed to checkout&quot;&gt;...&lt;/button&gt; is not clickable at point (719, 84). Other element would receive the click: &lt;div data-v-29c3be1b=&quot;&quot; data-v-a68519c8=&quot;&quot; class=&quot;modal&quot; style=&quot;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=138.0.7204.101)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bcff6a92c79ccf8b0a8903de6a3a311b, clickElement {id=f.0F19AE1C2F16C8BC8B9E7DC0F3797912.d.6C6220A3455CC25024F9739F70A5D9CE.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/fs/t7s3_2k51gd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53933}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53933/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (bcff6a92c79ccf8b0a8903de6a3a311b)] -&gt; css selector: button[aria-label=&apos;Proceed to checkout&apos;]]
+Session ID: bcff6a92c79ccf8b0a8903de6a3a311b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy30.click(Unknown Source)
+	at pom.PaymentSingleUser.paymentDetails(PaymentSingleUser.java:49)
+	at testCases.PaymentTestSingleUserTest.purchaseFlow(PaymentTestSingleUserTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CoffeCart-class-failed -->
+          <div class="suite-CoffeCart-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.AddItemsToCartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addingToCart">
+                  </a> <!-- addingToCart -->
+                  <span class="method-name">addingToCart</span>
+                  <div class="stack-trace">java.lang.AssertionError: The total cost is incorrect expected [Total: $33.00] but found [Total: $66.00]
+	at testCases.AddItemsToCartTest.addingToCart(AddItemsToCartTest.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CoffeCart-class-failed -->
+          <div class="suite-CoffeCart-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.ViewCartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="updatedCart">
+                  </a> <!-- updatedCart -->
+                  <span class="method-name">updatedCart</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Total: $37.00] but found [Total: $66.00]
+	at testCases.ViewCartTest.updatedCart(ViewCartTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CoffeCart-class-failed -->
           <div class="suite-CoffeCart-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -144,51 +233,6 @@
                   <a name="items">
                   </a> <!-- items -->
                   <span class="method-name">items</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CoffeCart-class-passed -->
-          <div class="suite-CoffeCart-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.AddItemsToCartTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addingToCart">
-                  </a> <!-- addingToCart -->
-                  <span class="method-name">addingToCart</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CoffeCart-class-passed -->
-          <div class="suite-CoffeCart-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.PaymentTestSingleUserTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="purchaseFlow">
-                  </a> <!-- purchaseFlow -->
-                  <span class="method-name">purchaseFlow</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CoffeCart-class-passed -->
-          <div class="suite-CoffeCart-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.ViewCartTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="updatedCart">
-                  </a> <!-- updatedCart -->
-                  <span class="method-name">updatedCart</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -280,15 +324,15 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'purchaseFlow')
 data.setCell(0, 2, 'testCases.PaymentTestSingleUserTest')
-data.setCell(0, 3, 664);
+data.setCell(0, 3, 1077);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'updatedCart')
-data.setCell(1, 2, 'testCases.ViewCartTest')
-data.setCell(1, 3, 127);
+data.setCell(1, 1, 'addingToCart')
+data.setCell(1, 2, 'testCases.AddItemsToCartTest')
+data.setCell(1, 3, 183);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addingToCart')
-data.setCell(2, 2, 'testCases.AddItemsToCartTest')
-data.setCell(2, 3, 125);
+data.setCell(2, 1, 'updatedCart')
+data.setCell(2, 2, 'testCases.ViewCartTest')
+data.setCell(2, 3, 62);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'items')
 data.setCell(3, 2, 'testCases.MenuItemsTest')
@@ -297,7 +341,7 @@ window.suiteTableData['CoffeCart']= { tableData: data, tableDiv: 'times-div-Coff
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 953 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-CoffeCart">
               </div> <!-- times-div-CoffeCart -->
             </div> <!-- times-div -->
@@ -316,7 +360,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testCases.AddItemsToCartTest</span>
+              <span class="ignored-class-name">testCases.PaymentTestSingleUserTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">launch</span>
                 <br/>
@@ -325,11 +369,11 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testCases.PaymentTestSingleUserTest</span>
+              <span class="ignored-class-name">testCases.AddItemsToCartTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">launch</span>
-                <br/>
                 <span class="ignored-method-name">close</span>
+                <br/>
+                <span class="ignored-method-name">launch</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -357,51 +401,57 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">1277 ms</span>
+                <span class="method-start">1201 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">items</span>
-                <span class="method-start">1281 ms</span>
+                <span class="method-start">1206 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.AddItemsToCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">1321 ms</span>
+                <span class="method-start">1245 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">addingToCart</span>
-                <span class="method-start">1323 ms</span>
+                <span class="method-start">1247 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.ViewCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">1449 ms</span>
+                <span class="method-start">1613 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">updatedCart</span>
-                <span class="method-start">1450 ms</span>
+                <span class="method-start">1614 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.PaymentTestSingleUserTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">1578 ms</span>
+                <span class="method-start">1853 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">purchaseFlow</span>
-                <span class="method-start">1579 ms</span>
+                <span class="method-start">1855 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.MenuItemsTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">close</span>
-                <span class="method-start">2244 ms</span>
+                <span class="method-start">3155 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

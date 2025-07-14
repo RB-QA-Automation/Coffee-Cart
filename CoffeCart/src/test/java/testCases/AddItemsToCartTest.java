@@ -34,7 +34,7 @@ public class AddItemsToCartTest extends BaseTest {
 
 		if (!finalPrice.equals(expectedPrice)) {
 
-			log.error("The total cost is incorrect. Expected: " + expectedPrice + "But found: " + finalPrice);
+			log.error("The total cost is incorrect. Expected: " + expectedPrice + " But found: " + finalPrice);
 
 		}
 
@@ -46,7 +46,7 @@ public class AddItemsToCartTest extends BaseTest {
 
 		if (!proTxt.equals(actualProText)) {
 
-			log.error("The promotion offer text is not matching as intended. Expected: " + actualProText + "But found: "
+			log.error("The promotion offer text is not matching as intended. Expected: " + actualProText + " But found: "
 					+ proTxt);
 		}
 
@@ -59,7 +59,7 @@ public class AddItemsToCartTest extends BaseTest {
 		if (!updatedCost.equals(expectedNewCost)) {
 
 			log.error(
-					"The new updated price does not match. Expected: " + expectedNewCost + "But found: " + updatedCost);
+					"The new updated price does not match. Expected: " + expectedNewCost + " But found: " + updatedCost);
 
 		}
 

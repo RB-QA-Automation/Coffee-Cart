@@ -1,6 +1,7 @@
 package base;
 
 import java.time.Duration;
+
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -13,7 +14,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import Utilities.ConfigReader;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
@@ -29,7 +29,6 @@ public class BaseTest {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
 
-		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 
 		log.info("Launching the browser");
@@ -45,7 +44,6 @@ public class BaseTest {
 		driver = new ChromeDriver(options);
 
 		driver.get(prop.getProperty("baseUrl"));
-		// driver.get("https://coffee-cart.app/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
