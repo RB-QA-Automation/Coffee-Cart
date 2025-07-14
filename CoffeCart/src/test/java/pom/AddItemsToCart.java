@@ -46,17 +46,15 @@ public class AddItemsToCart extends BasePage {
 
 	public void addingItems() {
 
-		clickElement(espresso);
 		log.debug("Clicking on Espresso");
-		espresso.click();
+		clickElement(espresso);
 
-		clickElement(mocha);
+		
 		log.debug("Clicking on Mocha");
-		mocha.click();
+		clickElement(mocha);
 
-		clickElement(cafeBreve);
 		log.debug("Clicking on Cafe Breve");
-		cafeBreve.click();
+		clickElement(cafeBreve);
 
 	}
 
@@ -81,7 +79,7 @@ public class AddItemsToCart extends BasePage {
 
 		wait.until(ExpectedConditions.visibilityOf(yes));
 		log.info("Accepting the promotional offer");
-		yes.click();
+		clickElement(yes);
 		String newAmount = cost.getText();
 		log.info("New cost of Beverages after adding promo offer:" + " " + newAmount);
 		return newAmount;
@@ -92,7 +90,7 @@ public class AddItemsToCart extends BasePage {
 
 		wait.until(ExpectedConditions.visibilityOf(no));
 
-		no.click();
+		clickElement(no);
 
 	}
 

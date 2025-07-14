@@ -44,9 +44,8 @@ public class PaymentSingleUser extends BasePage {
 
 	public void paymentDetails(String userName, String userEmail) {
 
-		clickElement(purchaseBtn);
 		log.debug("Clicking on purchase button");
-		purchaseBtn.click();
+		clickElement(purchaseBtn);		
 		
 		log.debug("Entering first and last name into field");
 		name.sendKeys(userName);
@@ -54,13 +53,11 @@ public class PaymentSingleUser extends BasePage {
 		log.debug("Entering email addresss");
 		email.sendKeys(userEmail);
 		
-		clickElement(checkBox);
 		log.debug("Clicking on check box");
-		checkBox.click();
+		clickElement(checkBox);
 		
-		clickElement(submitBtn);
 		log.debug("Clicking on submit button");
-		submitBtn.click();
+		clickElement(submitBtn);
 
 	}
 
