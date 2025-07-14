@@ -17,9 +17,8 @@ import pom.PaymentMultipleUser;
 import pom.PaymentSingleUser;
 
 public class PaymentTestSingleUserTest extends BaseTest {
-	
-	private static final Logger log = LogManager.getLogger(PaymentTestSingleUserTest.class.getName());
 
+	private static final Logger log = LogManager.getLogger(PaymentTestSingleUserTest.class.getName());
 
 	PaymentSingleUser pay;
 
@@ -33,15 +32,15 @@ public class PaymentTestSingleUserTest extends BaseTest {
 	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = { "singleuser" })
 	public void purchaseFlow() throws InterruptedException {
 
-		log.info("Purchase flow test with single user");
+		log.info("Purchase flow test with single user:");
 
-		pay.paymentDetails();
+		pay.paymentDetails(prop.getProperty("default_username"), prop.getProperty("default_email"));
 
 		String actualMsg = pay.paymentMsg();
 
 		String expectedMsg = "Thanks for your purchase. Please check your email for payment.";
 
-		if(!actualMsg.equals(expectedMsg)) {
+		if (!actualMsg.equals(expectedMsg)) {
 
 			log.error(
 					"Purchase confirmation text does not match. Expected: " + expectedMsg + "But found: " + actualMsg);

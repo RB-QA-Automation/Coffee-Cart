@@ -39,7 +39,7 @@ public class ViewCartTest extends BaseTest {
 
 		Assert.assertEquals(currentPriceDisplayed, currentExpected);
 
-		log.info("Adding and removing items from the basket");
+		log.info("Adding and removing items from the basket:");
 
 		cart.addAndRemove();
 

@@ -24,7 +24,7 @@ public class AddItemsToCartTest extends BaseTest {
 	@Test(dependsOnMethods = "testCases.MenuItemsTest.items", groups = { "singleuser" })
 	public void addingToCart() throws InterruptedException {
 
-		log.info("Adding items to cart");
+		log.info("Adding the following items to cart:");
 
 		beverages.addingItems();
 

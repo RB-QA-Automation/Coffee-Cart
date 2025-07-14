@@ -1,6 +1,7 @@
 package base;
 
 import java.time.Duration;
+import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import Utilities.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
@@ -18,13 +20,18 @@ public class BaseTest {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	private static Logger log = LogManager.getLogger(BaseTest.class.getName());
+	public static Properties prop;
+	public static ConfigReader configReader;
 
 	@BeforeTest(alwaysRun = true)
 	public void launch() {
 
+		configReader = new ConfigReader();
+		prop = configReader.init_prop();
+
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-		
+
 		log.info("Launching the browser");
 
 		// options.addArguments("--headless");
@@ -37,7 +44,8 @@ public class BaseTest {
 
 		driver = new ChromeDriver(options);
 
-		driver.get("https://coffee-cart.app/");
+		driver.get(prop.getProperty("baseUrl"));
+		// driver.get("https://coffee-cart.app/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -47,7 +55,7 @@ public class BaseTest {
 
 	@AfterTest(alwaysRun = true)
 	public void close() throws InterruptedException {
-		
+
 		log.info("Closing the browser");
 
 		if (driver != null) {

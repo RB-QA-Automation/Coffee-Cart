@@ -31,7 +31,7 @@ public class MenuItemsTest extends BaseTest {
 		// manually
 		// in order to pass test
 
-		log.info("Verifying all the coffees listed on the Menu and their prices");
+		log.info("Verifying all the coffees listed on the Menu and their prices:");
 
 		List<String> actualCoffees = coffeesListed.coffeeNames();
 

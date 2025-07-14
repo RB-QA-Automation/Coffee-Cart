@@ -11,6 +11,22 @@
       </run>
     </groups>
     <classes>
+      <class name="testCases.MenuItemsTest">
+        <methods>
+          <include name="launch"/>
+          <include name="pageSetup"/>
+          <include name="items"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- testCases.MenuItemsTest -->
+      <class name="testCases.AddItemsToCartTest">
+        <methods>
+          <include name="addingToCart"/>
+          <include name="pageSetup"/>
+          <include name="launch"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- testCases.AddItemsToCartTest -->
       <class name="testCases.PaymentTestSingleUserTest">
         <methods>
           <include name="pageSetup"/>
@@ -27,22 +43,6 @@
           <include name="pageSetup"/>
         </methods>
       </class> <!-- testCases.ViewCartTest -->
-      <class name="testCases.AddItemsToCartTest">
-        <methods>
-          <include name="addingToCart"/>
-          <include name="pageSetup"/>
-          <include name="launch"/>
-          <include name="close"/>
-        </methods>
-      </class> <!-- testCases.AddItemsToCartTest -->
-      <class name="testCases.MenuItemsTest">
-        <methods>
-          <include name="launch"/>
-          <include name="pageSetup"/>
-          <include name="items"/>
-          <include name="close"/>
-        </methods>
-      </class> <!-- testCases.MenuItemsTest -->
     </classes>
   </test> <!-- SingleUserPurchaseTest(failed) -->
 </suite> <!-- Failed suite [CoffeCart] -->

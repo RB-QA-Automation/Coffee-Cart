@@ -42,16 +42,16 @@ public class PaymentSingleUser extends BasePage {
 	@FindBy(css = "div[role='button']")
 	WebElement confirmMsg;
 
-	public void paymentDetails() {
+	public void paymentDetails(String userName, String userEmail) {
 
 		log.debug("Clicking on purchase button");
 		purchaseBtn.click();
 		
 		log.debug("Entering first and last name into field");
-		name.sendKeys("Raja Bhamra");
+		name.sendKeys(userName);
 		
 		log.debug("Entering email addresss");
-		email.sendKeys("raja@gmail.com");
+		email.sendKeys(userEmail);
 		
 		log.debug("Clicking on check box");
 		checkBox.click();
