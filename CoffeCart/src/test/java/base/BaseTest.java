@@ -31,7 +31,7 @@ public class BaseTest {
 
 		ChromeOptions options = new ChromeOptions();
 
-		log.info("Launching the browser");
+		log.info("LAUNCHING THE BROWSER");
 
 		// options.addArguments("--headless");
 		options.addArguments("--disable-gpu");
@@ -54,7 +54,7 @@ public class BaseTest {
 	@AfterTest(alwaysRun = true)
 	public void close() throws InterruptedException {
 
-		log.info("Closing the browser");
+		log.info("CLOSING THE BROWSER");
 
 		if (driver != null) {
 

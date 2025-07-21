@@ -1,7 +1,6 @@
 package pom;
 
 import org.openqa.selenium.WebDriver;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -11,6 +10,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.BasePage;
+
+/**
+ * Page Object Model for the main menu page, this is where users can view and
+ * add coffee items to their cart. This class includes all WebElements and
+ * methods needed in order to interact with items. In addition to verifying the
+ * total cost and promotional offers which are available.
+ */
 
 public class AddItemsToCart extends BasePage {
 
@@ -49,7 +55,6 @@ public class AddItemsToCart extends BasePage {
 		log.debug("Clicking on Espresso");
 		clickElement(espresso);
 
-		
 		log.debug("Clicking on Mocha");
 		clickElement(mocha);
 
@@ -78,7 +83,7 @@ public class AddItemsToCart extends BasePage {
 	public String acceptPromoOffer() {
 
 		wait.until(ExpectedConditions.visibilityOf(yes));
-		log.info("Accepting the promotional offer");
+		log.info("ACCEPTING THE PROMOTIONAL OFFER");
 		clickElement(yes);
 		String newAmount = cost.getText();
 		log.info("New cost of Beverages after adding promo offer:" + " " + newAmount);

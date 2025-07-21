@@ -25,7 +25,7 @@ public class ViewCartTest extends BaseTest {
 
 	public void updatedCart() throws InterruptedException {
 
-		log.info("Viewing cart and verifying final items");
+		log.info("VIEWING CART AND VERIFYING FINAL ITEMS:");
 
 		String currentPriceDisplayed = cart.currentTotal();
 
@@ -39,7 +39,7 @@ public class ViewCartTest extends BaseTest {
 
 		Assert.assertEquals(currentPriceDisplayed, currentExpected);
 
-		log.info("Adding and removing items from the basket:");
+		log.info("ADDING AND REMOVING ITEMS FROM THE BASKET:");
 
 		cart.addAndRemove();
 

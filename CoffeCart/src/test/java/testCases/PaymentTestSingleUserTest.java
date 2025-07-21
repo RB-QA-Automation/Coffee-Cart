@@ -32,7 +32,7 @@ public class PaymentTestSingleUserTest extends BaseTest {
 	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = { "singleuser" })
 	public void purchaseFlow() throws InterruptedException {
 
-		log.info("Purchase flow test with single user:");
+		log.info("PURCHASE FLOW TEST WITH SINGLE USER:");
 
 		pay.paymentDetails(prop.getProperty("default_username"), prop.getProperty("default_email"));
 

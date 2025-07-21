@@ -28,13 +28,13 @@ public class ExtentTestNGListener implements ITestListener {
 	@Override
 	public void onStart(ITestContext contentx) {
 
-		log.info("Test Suite started!");
+		log.info("TEST SUITE STARTED!");
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
 
-		log.info("Test Suite is ending!");
+		log.info("TEST SUITE IS ENDING!");
 		extent.flush();
 
 	}

@@ -2,7 +2,6 @@ package pom;
 
 import java.util.List;
 
-
 import org.openqa.selenium.WebDriver;
 
 import org.apache.logging.log4j.LogManager;
@@ -15,6 +14,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.BasePage;
+
+/**
+ * Page Object Model for viewing the users final list of items. Class contains
+ * elements which process the flow of viewing cart, in addition to adding more
+ * items The current cost is highlighted in addition to the final cost which is
+ * displayed at the end, a final item list is then provided.
+ */
 
 public class ViewCart extends BasePage {
 
@@ -48,7 +54,7 @@ public class ViewCart extends BasePage {
 
 		log.debug("Clicking on cart button");
 		clickElement(cartBtn);
-		
+
 		String cartTotal = amount.getText();
 		log.info("Current total cost in cart is:" + " " + cartTotal);
 		return cartTotal;
@@ -57,9 +63,9 @@ public class ViewCart extends BasePage {
 
 	public void addAndRemove() {
 
-	    log.debug("Adding a Cafe Breve to basket");
+		log.debug("Adding a Cafe Breve to basket");
 		clickElement(addCafeBreve);
-		
+
 		log.debug("Removing Mocha from basket");
 		clickElement(removeMocha);
 
