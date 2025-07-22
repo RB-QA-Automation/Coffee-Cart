@@ -17,7 +17,6 @@ import base.BasePage;
  * methods needed in order to interact with items. In addition to verifying the
  * total cost and promotional offers which are available.
  */
-
 public class AddItemsToCart extends BasePage {
 
 	private static final Logger log = LogManager.getLogger(AddItemsToCart.class.getName());
@@ -50,6 +49,10 @@ public class AddItemsToCart extends BasePage {
 	@FindBy(xpath = "//div[@class='promo']//button[2]")
 	WebElement no;
 
+	/**
+	 * A set of items from the menu is added to the cart (Espresso, Mocha, Cafe
+	 * Breve).
+	 */
 	public void addingItems() {
 
 		log.debug("Clicking on Espresso");
@@ -63,6 +66,11 @@ public class AddItemsToCart extends BasePage {
 
 	}
 
+	/**
+	 * Gathers the total cost from the cart.
+	 * 
+	 * @return The final amount is then returned and formatted in a String.
+	 */
 	public String totalCost() {
 
 		wait.until(ExpectedConditions.visibilityOf(cost));
@@ -72,6 +80,12 @@ public class AddItemsToCart extends BasePage {
 
 	}
 
+	/**
+	 * Wait for the promotional text to appear and retrieve the text.
+	 * 
+	 * @return The text is returned and formatted in a String which can be used to
+	 *         Assert.
+	 */
 	public String promoText() {
 
 		wait.until(ExpectedConditions.visibilityOf(promoTxt));
@@ -80,6 +94,11 @@ public class AddItemsToCart extends BasePage {
 
 	}
 
+	/**
+	 * Accepting the promotional offer and then obtaining the new total cost
+	 * 
+	 * @return New amount is then returned and formatted in a String
+	 */
 	public String acceptPromoOffer() {
 
 		wait.until(ExpectedConditions.visibilityOf(yes));
@@ -91,6 +110,9 @@ public class AddItemsToCart extends BasePage {
 
 	}
 
+	/**
+	 * Waiting for the promotional offer to appear but this time declining it.
+	 */
 	public void declinePromoOffer() {
 
 		wait.until(ExpectedConditions.visibilityOf(no));

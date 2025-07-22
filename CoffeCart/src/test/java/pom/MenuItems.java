@@ -16,7 +16,6 @@ import base.BasePage;
  * Page Object Model class iterates through all the items listed on the
  * Menu page, including coffee name and price,
  */
-
 public class MenuItems extends BasePage {
 
 	private static final Logger log = LogManager.getLogger(MenuItems.class.getName());
@@ -27,7 +26,10 @@ public class MenuItems extends BasePage {
 		PageFactory.initElements(driver, this);
 
 	}
-
+	
+	/**
+	 * 
+	 */
 	@FindBy(css = "li > h4")
 	public List<WebElement> coffees;
 

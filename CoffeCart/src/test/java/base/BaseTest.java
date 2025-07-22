@@ -15,6 +15,10 @@ import org.testng.annotations.BeforeTest;
 
 import Utilities.ConfigReader;
 
+/*
+ * Base Test class for all the test case classes in the framework. 
+ * This includes the initial setup and teardown of the WebDriver, config properties and logging.
+ */
 public class BaseTest {
 
 	public static WebDriver driver;
@@ -23,6 +27,10 @@ public class BaseTest {
 	public static Properties prop;
 	public static ConfigReader configReader;
 
+	/**
+	 * WebDriver setup and launches the browser before any test in the suite run
+	 * Base URL is gathered from the config.properties file
+	 */
 	@BeforeTest(alwaysRun = true)
 	public void launch() {
 
@@ -51,6 +59,12 @@ public class BaseTest {
 
 	}
 
+	/**
+	 * Method which closes the browser and quits after all the tests in the suite
+	 * have been ran successfully
+	 * 
+	 * @throws InterruptedException if the thread is interrupted while sleepin
+	 */
 	@AfterTest(alwaysRun = true)
 	public void close() throws InterruptedException {
 
@@ -64,6 +78,12 @@ public class BaseTest {
 
 	}
 
+	/**
+	 * Access is provided to the current WebDriver instance. Important for the
+	 * ExtentTestNGListener to take screenshots on when tests fail
+	 * 
+	 * @return The current and active WebDriver instance
+	 */
 	public WebDriver getDriver() {
 
 		return driver;
