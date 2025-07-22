@@ -12,6 +12,11 @@ import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
 import pom.MenuItems;
 
+/**
+ * This test case retrieves all the items listed on the menu, including name and
+ * price. An assertion is implemented to ensure the list is correct.
+ */
+
 public class MenuItemsTest extends BaseTest {
 
 	private static final Logger log = LogManager.getLogger(MenuItemsTest.class.getName());

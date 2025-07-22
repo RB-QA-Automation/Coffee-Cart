@@ -8,6 +8,11 @@ import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
 import pom.ViewCart;
 
+/**
+ * Test Case which verifies the final items in the basket and also final cost.
+ * Test includes assertions for the current price displayed against the current expected
+ * price, and also final price against final expected price.
+ */
 public class ViewCartTest extends BaseTest {
 
 	private static final Logger log = LogManager.getLogger(ViewCartTest.class.getName());

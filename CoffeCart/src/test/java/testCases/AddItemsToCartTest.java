@@ -8,8 +8,14 @@ import org.testng.annotations.BeforeMethod;
 import base.BaseTest;
 import pom.AddItemsToCart;
 
+/**
+ * This test case verifies the functionality of adding items to the card and has
+ * an assertion which checks the current price against the expected price. In
+ * addition to adding the promotion offer is available, added and testing that
+ * the new price is displayed correctly.
+ */
 public class AddItemsToCartTest extends BaseTest {
-	
+
 	private static final Logger log = LogManager.getLogger(AddItemsToCartTest.class.getName());
 
 	AddItemsToCart beverages;
@@ -18,7 +24,7 @@ public class AddItemsToCartTest extends BaseTest {
 	public void pageSetup() {
 
 		beverages = new AddItemsToCart(driver);
-		
+
 	}
 
 	@Test(dependsOnMethods = "testCases.MenuItemsTest.items", groups = { "singleuser" })
@@ -46,8 +52,8 @@ public class AddItemsToCartTest extends BaseTest {
 
 		if (!proTxt.equals(actualProText)) {
 
-			log.error("The promotion offer text is not matching as intended. Expected: " + actualProText + " But found: "
-					+ proTxt);
+			log.error("The promotion offer text is not matching as intended. Expected: " + actualProText
+					+ " But found: " + proTxt);
 		}
 
 		Assert.assertEquals(proTxt, actualProText, "The promotion text does not match");
@@ -58,8 +64,8 @@ public class AddItemsToCartTest extends BaseTest {
 
 		if (!updatedCost.equals(expectedNewCost)) {
 
-			log.error(
-					"The new updated price does not match. Expected: " + expectedNewCost + " But found: " + updatedCost);
+			log.error("The new updated price does not match. Expected: " + expectedNewCost + " But found: "
+					+ updatedCost);
 
 		}
 

@@ -2,12 +2,13 @@ package pom;
 
 import org.openqa.selenium.WebDriver;
 
-/**
- * Page Object Model class for single user purchases, inherits methods from the PaymentPage Page Object Model.
- * User is able to go through the purchase process with providing their name and email address.
- */
-
 import org.openqa.selenium.support.PageFactory;
+
+/**
+ * Page Object Model class for single user purchases, inherits methods from the
+ * PaymentPage Page Object Model. User is able to go through the purchase
+ * process with providing their name and email address.
+ */
 
 public class PaymentSingleUser extends PaymentPage {
 

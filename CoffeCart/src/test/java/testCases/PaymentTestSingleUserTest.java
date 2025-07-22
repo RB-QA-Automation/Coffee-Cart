@@ -16,6 +16,11 @@ import base.BaseTest;
 import pom.PaymentMultipleUser;
 import pom.PaymentSingleUser;
 
+/**
+ * A single user test case which confirms the user is able to proceed through to
+ * the purchase of their items. A name and email address is required in order to
+ * complete the purchase, in addition to ensuring the purchase confirmation message is correct.
+ */
 public class PaymentTestSingleUserTest extends BaseTest {
 
 	private static final Logger log = LogManager.getLogger(PaymentTestSingleUserTest.class.getName());

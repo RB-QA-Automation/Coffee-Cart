@@ -18,6 +18,7 @@ import pom.MenuItems;
 import pom.PaymentMultipleUser;
 import pom.ViewCart;
 
+
 public class PaymentMultipleUserTest extends BaseTest {
 
 	private static final Logger log = LogManager.getLogger(PaymentMultipleUserTest.class.getName());
