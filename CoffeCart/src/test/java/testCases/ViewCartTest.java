@@ -10,8 +10,8 @@ import pom.ViewCart;
 
 /**
  * Test Case which verifies the final items in the basket and also final cost.
- * Test includes assertions for the current price displayed against the current expected
- * price, and also final price against final expected price.
+ * Test includes assertions for the current price displayed against the current
+ * expected price, and also final price against final expected price.
  */
 public class ViewCartTest extends BaseTest {
 
@@ -19,6 +19,9 @@ public class ViewCartTest extends BaseTest {
 
 	ViewCart cart;
 
+	/**
+	 * Initializes the ViewCart page object before each of the test cases are ran.
+	 */
 	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
@@ -26,6 +29,12 @@ public class ViewCartTest extends BaseTest {
 
 	}
 
+	/**
+	 * A test which checks the final cost of the items in the cart, in addition to
+	 * adding and removing items.
+	 * 
+	 * @throws InterruptedException only if the thread is interrupted.
+	 */
 	@Test(dependsOnMethods = "testCases.AddItemsToCartTest.addingToCart", groups = { "singleuser" })
 
 	public void updatedCart() throws InterruptedException {

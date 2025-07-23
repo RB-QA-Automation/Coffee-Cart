@@ -23,12 +23,19 @@ public class MenuItemsTest extends BaseTest {
 
 	MenuItems coffeesListed;
 
+	/**
+	 * Initializes the MenuItems page object before each of the test cases are ran.
+	 */
 	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
 		coffeesListed = new MenuItems(driver);
 	}
 
+	/*
+	 * Checks and verifies that all of the coffee menu items are displayed with the
+	 * correct name and price.
+	 */
 	@Test(groups = { "singleuser" })
 	public void items() throws InterruptedException {
 

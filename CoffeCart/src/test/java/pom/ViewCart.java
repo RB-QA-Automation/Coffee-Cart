@@ -50,6 +50,11 @@ public class ViewCart extends BasePage {
 	@FindBy(css = "li[class$='list-item'] div:nth-child(1)")
 	List<WebElement> items;
 
+	/**
+	 * Clicking on cart and viewing total amount.
+	 * 
+	 * @return Storing total in String object.
+	 */
 	public String currentTotal() {
 
 		log.debug("Clicking on cart button");
@@ -61,6 +66,9 @@ public class ViewCart extends BasePage {
 
 	}
 
+	/**
+	 * Adding and removing items from the cart which updates the basket.
+	 */
 	public void addAndRemove() {
 
 		log.debug("Adding a Cafe Breve to basket");
@@ -71,6 +79,11 @@ public class ViewCart extends BasePage {
 
 	}
 
+	/**
+	 * A final total is then calculated.
+	 * 
+	 * @return Final cost is stored in a String variable.
+	 */
 	public String finalTotal() {
 
 		String finalCost = amount.getText();
@@ -79,6 +92,12 @@ public class ViewCart extends BasePage {
 
 	}
 
+	/**
+	 * The final list of items is then iterated through with the coffees name and
+	 * price
+	 * 
+	 * @return Final coffee list.
+	 */
 	public String finalItems() {
 
 		for (int i = 0; i < items.size(); i++) {

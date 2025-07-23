@@ -47,34 +47,60 @@ public class PaymentPage extends BasePage {
 	@FindBy(css = "div[role='button']")
 	WebElement confirmMsg;
 
+	/**
+	 * A WebElement that clicks on the purchase button.
+	 */
 	public void clickPurchase() {
 
 		clickElement(purchaseBtn);
 	}
 
+	/**
+	 * User to enter in their first name in the required field.
+	 * 
+	 * @param userName Entering name of the user during checkout
+	 */
 	public void fullName(String userName) {
 
 		name.sendKeys(userName);
 
 	}
 
+	/**
+	 * User to enter in their email address in the required field
+	 * 
+	 * @param userEmail Entering email address of the user during checkout
+	 */
 	public void email(String userEmail) {
 
 		email.sendKeys(userEmail);
 
 	}
 
+	/**
+	 * Selecting the order updates and promotional messages checkbox
+	 */
 	public void tickBox() {
 
 		clickElement(checkBox);
 
 	}
 
+	/**
+	 * Confirming to submit order button
+	 */
 	public void subBtn() {
 
 		clickElement(submitBtn);
 	}
 
+	/**
+	 * Waiting for the confirmed payment message to appear on screen then grabbing
+	 * text.
+	 * 
+	 * @return Storing purchase confirmation message in a String variable and then
+	 *         return.
+	 */
 	public String paymentMsg() {
 
 		wait.until(ExpectedConditions.visibilityOf(confirmMsg));

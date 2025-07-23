@@ -19,6 +19,11 @@ public class PaymentSingleUser extends PaymentPage {
 
 	}
 
+	/**
+	 * Complete payment process for a single user, required payment details are filled in and then submitted.
+	 * @param name User's full name.
+	 * @param email User's email adress.
+	 */
 	public void paymentDetails(String name, String email) {
 
 		log.debug("Clicking on purchase button");

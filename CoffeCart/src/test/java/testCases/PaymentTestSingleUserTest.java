@@ -27,6 +27,10 @@ public class PaymentTestSingleUserTest extends BaseTest {
 
 	PaymentSingleUser pay;
 
+	/**
+	 * Initializes the PaymentSingleUser page object before each of the test cases are
+	 * ran.
+	 */
 	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
@@ -34,6 +38,10 @@ public class PaymentTestSingleUserTest extends BaseTest {
 
 	}
 
+	/**
+	 * An end to end purchase flow is completed for a single user
+	 * @throws InterruptedException only if the thread is interrupted.
+	 */
 	@Test(dependsOnMethods = "testCases.ViewCartTest.updatedCart", groups = { "singleuser" })
 	public void purchaseFlow() throws InterruptedException {
 

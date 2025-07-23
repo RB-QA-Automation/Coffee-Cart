@@ -13,8 +13,8 @@ import org.openqa.selenium.support.PageFactory;
 import base.BasePage;
 
 /**
- * Page Object Model class iterates through all the items listed on the
- * Menu page, including coffee name and price,
+ * Page Object Model class iterates through all the items listed on the Menu
+ * page, including coffee name and price,
  */
 public class MenuItems extends BasePage {
 
@@ -26,9 +26,10 @@ public class MenuItems extends BasePage {
 		PageFactory.initElements(driver, this);
 
 	}
-	
+
 	/**
-	 * 
+	 * Public method which retrieves all the coffee items listed on the menu and
+	 * their names.
 	 */
 	@FindBy(css = "li > h4")
 	public List<WebElement> coffees;

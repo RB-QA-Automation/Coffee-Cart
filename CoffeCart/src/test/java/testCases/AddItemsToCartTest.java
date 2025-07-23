@@ -20,6 +20,10 @@ public class AddItemsToCartTest extends BaseTest {
 
 	AddItemsToCart beverages;
 
+	/**
+	 * Initializes the AddItemsToCart page object before each of the test cases are
+	 * ran.
+	 */
 	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
@@ -27,6 +31,13 @@ public class AddItemsToCartTest extends BaseTest {
 
 	}
 
+	/**
+	 * Test case adds a set of items to the cart and verifies if the total
+	 * price of the cart is expected. Then a promo offer is added, which then after
+	 * another check of the final price is conducted.
+	 * 
+	 * @throws InterruptedException only if the thread is interrupted.
+	 */
 	@Test(dependsOnMethods = "testCases.MenuItemsTest.items", groups = { "singleuser" })
 	public void addingToCart() throws InterruptedException {
 

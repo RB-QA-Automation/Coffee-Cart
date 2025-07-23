@@ -7,22 +7,32 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+/**
+ * An extent report is created every time a test suite is ran and provides
+ * in-depth detail on each test case.
+ */
 public class ExtentReportsManager {
 
 	private static ExtentReports extent;
 
+	/**
+	 * Building the foundation of the extent reports. Which includes the location of
+	 * the file, header, name, theme and tester information.
+	 * 
+	 * @return A ExtentReports object which is used to build and load the report.
+	 */
 	public static ExtentReports createInstance() {
 
 		if (extent == null) {
 
 			String reportPath = "target/extent-reports/ExtentReport.html";
-			
+
 			File reportDir = new File("target/extent-reports");
 			if (!reportDir.exists()) {
-				
+
 				reportDir.mkdirs();
 			}
-			
+
 			ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
 			sparkReporter.config().setDocumentTitle("Java Selenium Automation Framework");
