@@ -93,8 +93,7 @@ public class ViewCart extends BasePage {
 	}
 
 	/**
-	 * The final list of items is then iterated through with the coffees name and
-	 * price
+	 * The final list of items is then iterated through with the coffee names.
 	 * 
 	 * @return Final coffee list.
 	 */
