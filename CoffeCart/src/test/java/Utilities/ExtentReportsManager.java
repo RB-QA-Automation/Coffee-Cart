@@ -25,9 +25,9 @@ public class ExtentReportsManager {
 
 		if (extent == null) {
 
-			String reportPath = "target/extent-reports/ExtentReport.html";
+			String reportPath = System.getProperty("user.dir") + "/target/extent-reports/ExtentReport.html";
 
-			File reportDir = new File("target/extent-reports");
+			File reportDir = new File(System.getProperty("user.dir") + "/target/extent-reports");
 			if (!reportDir.exists()) {
 
 				reportDir.mkdirs();
