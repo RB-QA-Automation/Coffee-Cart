@@ -18,7 +18,12 @@ import pom.MenuItems;
 import pom.PaymentMultipleUser;
 import pom.ViewCart;
 
-
+/**
+ * A multi user test case which confirms multiple users are able to proceed
+ * through to the purchase of their items. A name and email address is required
+ * for each user in order to complete the purchase, in addition to ensuring the
+ * purchase confirmation message is correct.
+ */
 public class PaymentMultipleUserTest extends BaseTest {
 
 	private static final Logger log = LogManager.getLogger(PaymentMultipleUserTest.class.getName());
@@ -31,7 +36,6 @@ public class PaymentMultipleUserTest extends BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public void pageSetup() {
 
-		// Initializing all Page Objects before any test method runs
 		pays = new PaymentMultipleUser(driver);
 		beveragess = new AddItemsToCart(driver);
 		coffeesListedd = new MenuItems(driver);
