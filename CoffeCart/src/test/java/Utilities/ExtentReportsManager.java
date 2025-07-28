@@ -2,10 +2,15 @@ package Utilities;
 
 import java.io.File;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.aventstack.extentreports.ExtentReports;
 
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+
+import testCases.PaymentMultipleUserTest;
 
 /**
  * An extent report is created every time a test suite is ran and provides
@@ -14,6 +19,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReportsManager {
 
 	private static ExtentReports extent;
+
+	private static final Logger log = LogManager.getLogger(ExtentReportsManager.class.getName());
 
 	/**
 	 * Building the foundation of the extent reports. Which includes the location of
@@ -29,8 +36,20 @@ public class ExtentReportsManager {
 
 			File reportDir = new File(System.getProperty("user.dir") + "/target/extent-reports");
 			if (!reportDir.exists()) {
+				log.info("ExtentReportsManager: Directory does not exist. Attempting to create: "
+						+ reportDir.getAbsolutePath());
 
-				reportDir.mkdirs();
+				if (reportDir.mkdirs()) {
+					log.info("ExtentReportsManager: Directory created successfully");
+				} else {
+
+					log.info("ExtentReportsManager: FAILED to create directory");
+
+				}
+
+			} else {
+
+				log.info("ExtentReportsManager: Directory already exists: " + reportDir.getAbsolutePath());
 			}
 
 			ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
