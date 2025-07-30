@@ -4,7 +4,6 @@
 [![Selenium](https://img.shields.io/badge/Selenium-4.21.0-green.svg)](https://www.selenium.dev/)
 [![TestNG](https://img.shields.io/badge/TestNG-7.10.2-orange.svg)](https://testng.org/)
 [![Maven](https://img.shields.io/badge/Maven-3.13.0-red.svg)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a comprehensive test automation framework built using **Java**, **Selenium**, and **TestNG** to test the "Coffee Cart" web application. The framework is designed to be robust, maintainable, and scalable, following the **Page Object Model (POM)** design pattern. It supports data-driven testing, generates detailed reports, and can be easily integrated into a CI/CD pipeline.
 
