@@ -36,7 +36,7 @@ public class ExtentTestNGListener implements ITestListener {
 	@Override
 	public void onStart(ITestContext contentx) {
 
-		log.info("TEST SUITE STARTED!");
+		log.info("TEST SUITE STARTED");
 	}
 
 	/**

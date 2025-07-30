@@ -78,7 +78,7 @@ public class PaymentMultipleUserTest extends BaseTest {
 	@Test(dataProvider = "paymentData", groups = { "multipletestuser" })
 	public void purchaseFlow(String nameFromExcel, String emailFromExcel) throws InterruptedException {
 
-		log.info("----- Starting purchase flow for user: " + nameFromExcel + "-----");
+		log.info("STARTING PURCHASE FLOW FOR:  " + nameFromExcel);
 
 		log.info("RETRIEVING TOTAL NUMBER OF COFFEES WHICH ARE DISPLAYED ON THE MENU!");
 
@@ -92,8 +92,8 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 		if (actualCoffees.size() != expectedNames.size()) {
 
-			log.error("Total number of coffees is incorrect. Expected: " + expectedNames.size() + "But got: "
-					+ actualCoffees.size());
+			log.error("Total number of coffees is incorrect. Expected: " + " " +  expectedNames.size() + " " + "But got: "
+					+ " " + actualCoffees.size());
 		}
 
 		log.info("VERIFYING THE NAMES OF EACH COFFEE LISTED ON THE MENU!");
@@ -106,19 +106,20 @@ public class PaymentMultipleUserTest extends BaseTest {
 			String expectedName = expectedNames.get(i);
 			String expectedPrice = expectedPrices.get(i);
 
-			if (!actualData.equals(expectedName)) {
+			if (!actualData.contains(expectedName)) {
 
-				log.error("Assertion failed at index: " + i + "Expected: " + expectedName + "But found: " + actualData);
+				log.error("Assertion failed at index: " + " " + i + " " + "Expected: " + expectedName + " "
+						+ "But found: " + actualData);
 
 			}
 
 			Assert.assertTrue(actualData.contains(expectedName), "Item #" + i
 					+ " did not contain the expected name. Expected: '" + expectedName + "' in '" + actualData + "'");
 
-			if (!actualData.equals(expectedPrice)) {
+			if (!actualData.contains(expectedPrice)) {
 
 				log.error(
-						"Assertion failed at index: " + i + "Expected: " + expectedPrice + "But found: " + actualData);
+						"Assertion failed at index: " + " " + i + " " + "Expected: " + " " + expectedPrice + " " + "But found: " + " " + actualData);
 
 			}
 
@@ -136,7 +137,7 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 		if (!finalPrice.equals(expectedPrice)) {
 
-			log.error("Total cost does not match. Expected: " + expectedPrice + "But found: " + finalPrice);
+			log.error("Total cost does not match. Expected: " + " " + expectedPrice + " " + "But found: " + " " + finalPrice);
 		}
 
 		Assert.assertEquals(finalPrice, expectedPrice, "The total cost is incorrect");
@@ -149,7 +150,7 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 		if (!proTxt.equals(actualProText)) {
 
-			log.error("Promotion text does not match. Expected: " + actualProText + "But found: " + proTxt);
+			log.error("Promotion text does not match. Expected: " + " "  + actualProText + " " + "But found: " + " " + proTxt);
 		}
 
 		Assert.assertEquals(proTxt, actualProText, "The promotion text does not match");
@@ -162,8 +163,8 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 		if (!updatedCost.equals(expectedNewCost)) {
 
-			log.error("Updated total cost after adding promo offer does not match. Expected: " + expectedNewCost
-					+ "But found: " + updatedCost);
+			log.error("Updated total cost after adding promo offer does not match. Expected: " + " " + expectedNewCost
+					+ " " + "But found: " + " " + updatedCost);
 		}
 
 		Assert.assertEquals(updatedCost, expectedNewCost, "The updated price is incorrect");
@@ -174,8 +175,8 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 		if (!currentPriceDisplayed.equals(currentExpected)) {
 
-			log.error("Current price does not match. Expected: " + currentExpected + "But found: "
-					+ currentPriceDisplayed);
+			log.error("Current price does not match. Expected: " + " "  + currentExpected + " " + "But found: "
+					+ " " + currentPriceDisplayed);
 		}
 
 		Assert.assertEquals(currentPriceDisplayed, currentExpected);
@@ -190,7 +191,7 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 		if (!finalPrices.equals(finalExpected)) {
 
-			log.error("The final price does not match: Expected: " + finalExpected + "But found: " + finalPrices);
+			log.error("The final price does not match: Expected: " + " " + finalExpected + " " + "But found: " + " " + finalPrices);
 
 		}
 
@@ -208,8 +209,8 @@ public class PaymentMultipleUserTest extends BaseTest {
 
 		if (!actualMsg.equals(expectedMsg)) {
 
-			log.error("Purchase confirmation message does not match. Expected: " + expectedMsg + "But found: "
-					+ actualMsg);
+			log.error("Purchase confirmation message does not match. Expected: " + " " + expectedMsg + " " + "But found: "
+					+ " " + actualMsg);
 		}
 
 		Assert.assertEquals(actualMsg, expectedMsg);

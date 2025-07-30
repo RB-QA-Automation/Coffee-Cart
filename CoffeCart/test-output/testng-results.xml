@@ -2,64 +2,103 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-23T18:53:21 BST" name="CoffeCart" finished-at="2025-07-23T18:53:26 BST" duration-ms="5315">
+  <suite started-at="2025-07-30T17:27:51 BST" name="CoffeCart" finished-at="2025-07-30T17:27:57 BST" duration-ms="6642">
     <groups>
-      <group name="singleuser">
-        <method signature="MenuItemsTest.items()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" name="items" class="testCases.MenuItemsTest"/>
-        <method signature="AddItemsToCartTest.addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@302fec27]" name="addingToCart" class="testCases.AddItemsToCartTest"/>
-        <method signature="ViewCartTest.updatedCart()[pri:0, instance:testCases.ViewCartTest@770d0ea6]" name="updatedCart" class="testCases.ViewCartTest"/>
-        <method signature="PaymentTestSingleUserTest.purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@48c40605]" name="purchaseFlow" class="testCases.PaymentTestSingleUserTest"/>
-      </group> <!-- singleuser -->
+      <group name="multipletestuser">
+        <method signature="PaymentMultipleUserTest.purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" name="purchaseFlow" class="testCases.PaymentMultipleUserTest"/>
+      </group> <!-- multipletestuser -->
     </groups>
-    <test started-at="2025-07-23T18:53:21 BST" name="SingleUserPurchaseTest" finished-at="2025-07-23T18:53:26 BST" duration-ms="5315">
-      <class name="testCases.PaymentTestSingleUserTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentTestSingleUserTest@48c40605]" started-at="2025-07-23T18:53:23 BST" name="pageSetup" finished-at="2025-07-23T18:53:23 BST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="purchaseFlow()[pri:0, instance:testCases.PaymentTestSingleUserTest@48c40605]" started-at="2025-07-23T18:53:23 BST" name="purchaseFlow" finished-at="2025-07-23T18:53:23 BST" depends-on-methods="testCases.ViewCartTest.updatedCart" duration-ms="688" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- purchaseFlow -->
-      </class> <!-- testCases.PaymentTestSingleUserTest -->
-      <class name="testCases.AddItemsToCartTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.AddItemsToCartTest@302fec27]" started-at="2025-07-23T18:53:22 BST" name="pageSetup" finished-at="2025-07-23T18:53:22 BST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="addingToCart()[pri:0, instance:testCases.AddItemsToCartTest@302fec27]" started-at="2025-07-23T18:53:22 BST" name="addingToCart" finished-at="2025-07-23T18:53:22 BST" depends-on-methods="testCases.MenuItemsTest.items" duration-ms="208" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addingToCart -->
-      </class> <!-- testCases.AddItemsToCartTest -->
-      <class name="testCases.MenuItemsTest">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-23T18:53:21 BST" name="launch" finished-at="2025-07-23T18:53:22 BST" duration-ms="1088" status="PASS">
+    <test started-at="2025-07-30T17:27:51 BST" name="SingleUserPurchaseTest" finished-at="2025-07-30T17:27:57 BST" duration-ms="6642">
+      <class name="testCases.PaymentMultipleUserTest">
+        <test-method is-config="true" signature="launch()[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:51 BST" name="launch" finished-at="2025-07-30T17:27:52 BST" duration-ms="1118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-23T18:53:22 BST" name="pageSetup" finished-at="2025-07-23T18:53:22 BST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:52 BST" name="pageSetup" finished-at="2025-07-30T17:27:52 BST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="items()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-23T18:53:22 BST" name="items" finished-at="2025-07-23T18:53:22 BST" duration-ms="47" status="PASS">
+        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:52 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-07-30T17:27:53 BST" duration-ms="1070" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Raja Bhamra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[raja@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- items -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testCases.MenuItemsTest@2a2da905]" started-at="2025-07-23T18:53:23 BST" name="close" finished-at="2025-07-23T18:53:26 BST" duration-ms="3100" status="PASS">
+        </test-method> <!-- purchaseFlow -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:53 BST" name="pageSetup" finished-at="2025-07-30T17:27:53 BST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:53 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-07-30T17:27:53 BST" duration-ms="402" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jake Moss]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jake@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- purchaseFlow -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:53 BST" name="pageSetup" finished-at="2025-07-30T17:27:53 BST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:53 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-07-30T17:27:54 BST" duration-ms="386" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Harry Knight]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Harry@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- purchaseFlow -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:54 BST" name="pageSetup" finished-at="2025-07-30T17:27:54 BST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="purchaseFlow(java.lang.String,java.lang.String)[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:54 BST" name="purchaseFlow" data-provider="paymentData" finished-at="2025-07-30T17:27:54 BST" duration-ms="381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Romana Virdi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Romana@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- purchaseFlow -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testCases.PaymentMultipleUserTest@64c2b546]" started-at="2025-07-30T17:27:54 BST" name="close" finished-at="2025-07-30T17:27:57 BST" duration-ms="3097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- testCases.MenuItemsTest -->
-      <class name="testCases.ViewCartTest">
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:testCases.ViewCartTest@770d0ea6]" started-at="2025-07-23T18:53:22 BST" name="pageSetup" finished-at="2025-07-23T18:53:22 BST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="updatedCart()[pri:0, instance:testCases.ViewCartTest@770d0ea6]" started-at="2025-07-23T18:53:22 BST" name="updatedCart" finished-at="2025-07-23T18:53:23 BST" depends-on-methods="testCases.AddItemsToCartTest.addingToCart" duration-ms="153" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatedCart -->
-      </class> <!-- testCases.ViewCartTest -->
+      </class> <!-- testCases.PaymentMultipleUserTest -->
     </test> <!-- SingleUserPurchaseTest -->
   </suite> <!-- CoffeCart -->
 </testng-results>

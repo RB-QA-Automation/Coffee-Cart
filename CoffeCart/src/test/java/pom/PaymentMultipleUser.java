@@ -42,7 +42,6 @@ public class PaymentMultipleUser extends PaymentPage {
 		log.debug("Clicking on submit button");
 		subBtn();
 
-		paymentMsg();
 
 	}
 
