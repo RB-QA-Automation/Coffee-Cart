@@ -1,6 +1,14 @@
 # Coffee Cart - Java Selenium Automation Framework
 
+[![Java](https://img.shields.io/badge/Java-17-blue.svg)](https://www.java.com)
+[![Selenium](https://img.shields.io/badge/Selenium-4.21.0-green.svg)](https://www.selenium.dev/)
+[![TestNG](https://img.shields.io/badge/TestNG-7.10.2-orange.svg)](https://testng.org/)
+[![Maven](https://img.shields.io/badge/Maven-3.13.0-red.svg)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This is a comprehensive test automation framework built using **Java**, **Selenium**, and **TestNG** to test the "Coffee Cart" web application. The framework is designed to be robust, maintainable, and scalable, following the **Page Object Model (POM)** design pattern. It supports data-driven testing, generates detailed reports, and can be easily integrated into a CI/CD pipeline.
+
+---
 
 ## Features ✨
 
@@ -32,15 +40,16 @@ To get started with this project, follow these steps:
 
 ### Prerequisites
 
-* **Java Development Kit (JDK)** installed on your machine.
-* **Maven** installed and configured.
-* An **IDE** such as Eclipse or IntelliJ IDEA.
+* **Java Development Kit (JDK) 17 or higher**
+* **Maven** installed and configured
+* An **IDE** such as Eclipse or IntelliJ IDEA
+* **Google Chrome** browser
 
 ### Setup
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone [https://github.com/RB-QA-Automation/Coffee-Cart.git](https://github.com/RB-QA-Automation/Coffee-Cart.git)
     ```
 2.  **Import the project:**
     * Open your IDE (Eclipse or IntelliJ).
@@ -60,11 +69,18 @@ You can run the tests in the following ways:
     * The project includes TestNG suite files in the `Test Runs` directory.
     * You can run these files directly from your IDE to execute the test suites.
 
-2.  **Using Maven:**
+2.  **Using Maven Profiles:**
+    * The `pom.xml` is configured with two Maven profiles: `single-user` and `multi-user`.
     * Open a terminal or command prompt and navigate to the project's root directory.
-    * Run the following command to execute the tests:
+
+    * To run the **single-user** test suite, use the following command:
         ```bash
-        mvn test
+        mvn test -P single-user
+        ```
+
+    * To run the **multi-user** test suite, use the following command:
+        ```bash
+        mvn test -P multi-user
         ```
 
 ---
@@ -102,10 +118,47 @@ The project follows a standard Maven project structure:
 
 ---
 
+## Test Data 📝
+
+The framework supports data-driven testing using an Excel file.
+
+* **Location:** The test data file is located at `src/test/java/resources/Data Driven Testing - Coffee Cart.xlsx`.
+* **Format:** The file has a `Sheet1` with "Name" and "Email" columns.
+* **To add more test data:** Simply add new rows to the Excel sheet with the required data. The framework will automatically pick up the new data and run the tests for each row.
+
+---
+
 ## Reporting 📊
 
 The framework generates detailed HTML reports using **ExtentReports**. The reports are saved in the `target/extent-reports` directory after the test execution is complete. The reports provide a comprehensive overview of the test results, including passed, failed, and skipped tests, along with screenshots for any failed test cases.
 
+---
+
+## Contributing 🤝
+
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+1.  **Fork the repository.**
+2.  **Create a new branch:**
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+3.  **Make your changes and commit them:**
+    ```bash
+    git commit -m "Add some feature"
+    ```
+4.  **Push to the branch:**
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+5.  **Create a new Pull Request.**
+
+---
+
+
+## Author 👨‍💻
+
+* **Raja Bhamra** - [RB-QA-Automation](https://github.com/RB-QA-Automation)
 
 
 
